@@ -1,0 +1,39 @@
+.page {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  max-width: 1440px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.snowflake {
+  width: 194px;
+  height: 194px;
+  background-image: url(../images/snowflake.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: fixed;
+  
+  
+}
+
+@media screen and (max-width: 960px) {
+  .page {
+    /* max-width: 812px; */
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .page {
+    /* max-width: 744px; */
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .page {
+    /* max-width: 375px; */
+  }
+}
