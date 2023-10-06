@@ -57,7 +57,54 @@
 
         <!-- </div> -->
       </section>
-      <section class="donations"></section>
+      <section class="donations">
+        <form class="donations__form" name="form" id="form">
+          <fieldset class="donations__fields">
+            <input
+              class="donations__input"
+              type="text"
+              required
+              placeholder="Ваше имя"
+            />
+            <input
+              class="donations__input"
+              type="email"
+              required
+              placeholder="Ваше почта"
+            />
+            <input
+              class="donations__input"
+              type="text"
+              placeholder="Компания"
+            />
+          </fieldset>
+          <ul class="donations__quantity list">
+            <li class="donations__item">300</li>
+            <li class="donations__item">500</li>
+            <li class="donations__item">1000</li>
+            <li class="donations__item">3000</li>
+            <li class="donations__item">5000</li>
+            <li class="donations__item">10000</li>
+          </ul>
+          <input
+            class="donations__input"
+            type="number"
+            placeholder="Другая сумма"
+          />
+          <button class="button donations__button">Пожертвовать</button>
+          <p class="donations__remark text">
+            Пожертвования идут на общий счет, из которого мы в дальнейшем
+            распределим пожертвования сами среди детей.
+          </p>
+        </form>
+        <div class="donations__img-wrp">
+          <img
+            class="donations__img"
+            alt="Новый год"
+            src="./images/new_year.png"
+          />
+        </div>
+      </section>
       <section class="cards"></section>
       <section class="banner"></section>
       <section class="social"></section>
