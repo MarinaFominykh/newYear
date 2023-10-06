@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Щедрый Новый Год</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
 
@@ -105,12 +109,264 @@
           />
         </div>
       </section>
-      <section class="cards"></section>
+      <section class="cards">
+        <!-- <svg
+          class="cards__svg"
+          xmlns="http://www.w3.org/2000/svg"
+          width="1440"
+          height="832"
+          viewBox="0 0 1440 832"
+          fill="none"
+        >
+          <path
+            d="M0 0H86C86 0 472.172 26.5729 720 27.8721C1001.38 29.3471 1440 0 1440 0V832C1440 832 1271.08 791.372 1214 791.372C986 791.372 916 832 684 832C545.539 832 348 817.372 242 811.372C136 805.372 0 832 0 832V0Z"
+            fill="#FFEFE7"
+          />
+        </svg> -->
+        <div class="swiper card">
+          <ul class="card__list swiper-wrapper list">
+            <li class="swiper-slide card__item">
+              <article class="card__content">
+                <div class="card__img-wrp">
+                  <img src="./images/girl_intro.png" class="card__img" />
+                </div>
+                <div class="card__target">На лечение и медикаменты</div>
+                <div class="card__chaild">
+                  <p class="text card__name">Имя</p>
+                  <p class="text card__age">10 лет</p>
+                </div>
+                <label class="card__label" for="progress"
+                  >Собрано <span class="card__span">800 965 ₽</span> из
+                  <span class="card__span">1 000 000 ₽</span></label
+                >
+                <progress
+                  class="card__progress"
+                  id="progress"
+                  value="20"
+                  max="100"
+                ></progress>
+
+                <p class="card__preview">
+                  Из-за проблем со здоровьем Сережа обучается дома. Ему
+                  необходимо постоянно принимать лекарства, которые помогают ему
+                  учиться
+                </p>
+                <button class="button card__link">Хочу помочь</button>
+                <button class="button card__button">Узнать историю</button>
+              </article>
+            </li>
+            <li class="swiper-slide card__item">
+              <article class="card__content">
+                <div class="card__img-wrp">
+                  <img src="./images/girl_intro.png" class="card__img" />
+                </div>
+                <div class="card__target">На лечение и медикаменты</div>
+                <div class="card__chaild">
+                  <p class="text card__name">Имя</p>
+                  <p class="text card__age">10 лет</p>
+                </div>
+                <label class="card__label" for="progress"
+                  >Собрано <span class="card__span">800 965 ₽</span> из
+                  <span class="card__span">1 000 000 ₽</span></label
+                >
+                <progress
+                  class="card__progress"
+                  id="progress"
+                  value="20"
+                  max="100"
+                ></progress>
+
+                <p class="card__preview">
+                  Из-за проблем со здоровьем Сережа обучается дома. Ему
+                  необходимо постоянно принимать лекарства, которые помогают ему
+                  учиться
+                </p>
+                <button class="button card__link">Хочу помочь</button>
+                <button class="button card__button">Узнать историю</button>
+              </article>
+            </li>
+            <li class="swiper-slide card__item">
+              <article class="card__content">
+                <div class="card__img-wrp">
+                  <img src="./images/girl_intro.png" class="card__img" />
+                </div>
+                <div class="card__target">На лечение и медикаменты</div>
+                <div class="card__chaild">
+                  <p class="text card__name">Имя</p>
+                  <p class="text card__age">10 лет</p>
+                </div>
+                <label class="card__label" for="progress"
+                  >Собрано <span class="card__span">800 965 ₽</span> из
+                  <span class="card__span">1 000 000 ₽</span></label
+                >
+                <progress
+                  class="card__progress"
+                  id="progress"
+                  value="20"
+                  max="100"
+                ></progress>
+
+                <p class="card__preview">
+                  Из-за проблем со здоровьем Сережа обучается дома. Ему
+                  необходимо постоянно принимать лекарства, которые помогают ему
+                  учиться
+                </p>
+                <button class="button card__link">Хочу помочь</button>
+                <button class="button card__button">Узнать историю</button>
+              </article>
+            </li>
+            <li class="swiper-slide card__item">
+              <article class="card__content">
+                <div class="card__img-wrp">
+                  <img src="./images/girl_intro.png" class="card__img" />
+                </div>
+                <div class="card__target">На лечение и медикаменты</div>
+                <div class="card__chaild">
+                  <p class="text card__name">Имя</p>
+                  <p class="text card__age">10 лет</p>
+                </div>
+                <label class="card__label" for="progress"
+                  >Собрано <span class="card__span">800 965 ₽</span> из
+                  <span class="card__span">1 000 000 ₽</span></label
+                >
+                <progress
+                  class="card__progress"
+                  id="progress"
+                  value="20"
+                  max="100"
+                ></progress>
+
+                <p class="card__preview">
+                  Из-за проблем со здоровьем Сережа обучается дома. Ему
+                  необходимо постоянно принимать лекарства, которые помогают ему
+                  учиться
+                </p>
+                <button class="button card__link">Хочу помочь</button>
+                <button class="button card__button">Узнать историю</button>
+              </article>
+            </li>
+            <li class="swiper-slide card__item">
+              <article class="card__content">
+                <div class="card__img-wrp">
+                  <img src="./images/girl_intro.png" class="card__img" />
+                </div>
+                <div class="card__target">На лечение и медикаменты</div>
+                <div class="card__chaild">
+                  <p class="text card__name">Имя</p>
+                  <p class="text card__age">10 лет</p>
+                </div>
+                <label class="card__label" for="progress"
+                  >Собрано <span class="card__span">800 965 ₽</span> из
+                  <span class="card__span">1 000 000 ₽</span></label
+                >
+                <progress
+                  class="card__progress"
+                  id="progress"
+                  value="20"
+                  max="100"
+                ></progress>
+
+                <p class="card__preview">
+                  Из-за проблем со здоровьем Сережа обучается дома. Ему
+                  необходимо постоянно принимать лекарства, которые помогают ему
+                  учиться
+                </p>
+                <button class="button card__link">Хочу помочь</button>
+                <button class="button card__button">Узнать историю</button>
+              </article>
+            </li>
+            <li class="swiper-slide card__item">
+              <article class="card__content">
+                <div class="card__img-wrp">
+                  <img src="./images/girl_intro.png" class="card__img" />
+                </div>
+                <div class="card__target">На лечение и медикаменты</div>
+                <div class="card__chaild">
+                  <p class="text card__name">Имя</p>
+                  <p class="text card__age">10 лет</p>
+                </div>
+                <label class="card__label" for="progress"
+                  >Собрано <span class="card__span">800 965 ₽</span> из
+                  <span class="card__span">1 000 000 ₽</span></label
+                >
+                <progress
+                  class="card__progress"
+                  id="progress"
+                  value="20"
+                  max="100"
+                ></progress>
+
+                <p class="card__preview">
+                  Из-за проблем со здоровьем Сережа обучается дома. Ему
+                  необходимо постоянно принимать лекарства, которые помогают ему
+                  учиться
+                </p>
+                <button class="button card__link">Хочу помочь</button>
+                <button class="button card__button">Узнать историю</button>
+              </article>
+            </li>
+          </ul>
+        </div>
+        <div class="swiper__nav-container">
+          <div class="navigation prev">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+            >
+              <path
+                d="M37.5 45L22.5 30L37.5 15"
+                stroke="#FA6334"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="navigation next">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+            >
+              <path
+                d="M22.5 45L37.5 30L22.5 15"
+                stroke="#FA6334"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
       <section class="banner"></section>
       <section class="social"></section>
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <p class="text footer__text">
+        Нажимая на кнопку “Пожертвовать”, вы соглашаетесь с условиями
+        <a href="#" class="footer__link link"
+          >публичной оферты о заключении договора пожертвования.</a
+        >
+      </p>
+      <p class="text footer__text">
+        Вы будете перенаправлены на защищенную страницу сервиса онлайн-платежей
+        ЮKassa, где сможете выбрать удобный Вам способ пожертвования.
+      </p>
+      <p class="text footer__text">
+        По всем вопросам, связанными с проведением акции, пожалуйста,
+        обращайтесь по электронной почте.
+        <a href="#" class="footer__link link">по электронной почте.</a>
+      </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./pages/index.js"></script>
   </body>
 </html>

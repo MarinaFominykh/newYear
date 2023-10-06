@@ -1,0 +1,248 @@
+.cards {
+  position: relative;
+  /* min-height: 832px; */
+  padding: 55px 64px 35px;
+  overflow: hidden;
+  background: url(../images/background.png) center / 100% 100% no-repeat;
+  margin-bottom: 246px;
+}
+
+.cards__svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.swiper {
+  width: 100%;
+
+}
+.swiper-slide {
+  width: 100px;
+  border-radius: 10px;
+  background: #fff;
+  padding: 16px;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.card__img-wrp {
+  width: 100%;
+  max-height: 300px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #ffefe7;
+  margin-bottom: -12px;
+}
+
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.card__target {
+width: 100%;
+  border-radius: 38px;
+  background: #ffefe7;
+  color: #8d7f7f;
+  text-align: center;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  
+}
+.card__chaild {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+}
+.card__label {
+  color: #464646;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: -8px;
+}
+.card__span {
+  color: #464646;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+.card__preview {
+  color: #464646;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  
+}
+.card__link {
+    
+}
+
+.card__button {
+    padding: 0;
+    background-color: transparent;
+    color:#FA6334;
+font-family: 'Inter', Arial, sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 20px;
+}
+.card__button:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+.swiper__nav-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.navigation {
+  position: relative;
+  align-self: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navigation:hover {
+  opacity: 0.7;
+}
+.swiper-pagination {
+  width: initial !important;
+  position: relative;
+  align-self: center;
+  bottom: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  width: 24px;
+  height: 24px;
+  background-color: #eee;
+  border: 1px #fa6334 solid;
+  opacity: 1;
+  margin: auto;
+}
+
+.swiper-pagination-bullet-active {
+  width: 32px;
+  height: 32px;
+  background-color: #fa6334;
+}
+
+progress {
+  width: 100%;
+  height: 16px;
+  border-radius: 10px;
+  background: #fff;
+}
+progress::-webkit-progress-bar {
+  border-radius: 21px;
+  background: #eee;
+}
+progress::-webkit-progress-value {
+  border-radius: 21px;
+  background: #fa6334;
+}
+progress::-moz-progress-bar {
+  /* style rules */
+}
+
+@media screen and (max-width: 960px) {
+.cards {
+  padding: 32px 24px 50px;
+  margin-bottom: 111px;
+}
+.card__chaild {
+   font-size: 18px; 
+   line-height: 24px;
+}
+.card__preview {
+   font-size: 14px;
+   line-height: 18px;
+  
+}
+.card__button {
+   font-size: 14px;
+   line-height: 16px;
+  
+}
+
+}
+
+@media screen and (max-width: 800px) {
+.cards {
+  padding: 48px 48px 45px 48px;
+  margin-bottom: 138px;
+}
+.card__target {
+font-size: 16px; 
+   line-height: 20px;
+}
+.card__chaild {
+   font-size: 18px; 
+   line-height: 22px;
+}
+.card__preview {
+   font-size: 16px;
+   line-height: 20px;
+  
+}
+.card__button {
+   font-size: 16px;
+   line-height: 20px;
+  
+}
+
+}
+
+@media screen and (max-width: 705px) {
+.cards {
+  padding: 32px 24px 50px;
+  margin-bottom: 64px;
+}
+.card__target {
+font-size: 14px; 
+   line-height: 16px;
+}
+.card__chaild {
+   font-size: 18px; 
+   line-height: 24px;
+}
+.card__preview {
+   font-size: 14px;
+   line-height: 18px;
+  
+}
+.card__button {
+   font-size: 14px;
+   line-height: 16px;
+  
+}
+
+}
