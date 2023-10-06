@@ -2,7 +2,7 @@
   /* display: flex;
   justify-content: space-between;
   align-items: flex-start; */
-  margin: 0 0 0 64px;
+  margin: 0 0 100px 64px;
   padding-top: 61px;
   position: relative;
   /* gap: 368px; */
@@ -10,13 +10,11 @@
   background-repeat: no-repeat;
   background-position: right top;
   background-size: contain;
-  border: 1px red solid;
 }
 .intro__content {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  
 }
 
 .intro__logo {
@@ -56,7 +54,6 @@
   height: 100%;
 }
 .intro__img {
-
   position: absolute;
   top: 0;
   right: 0;
@@ -65,7 +62,7 @@
 @media screen and (max-width: 960px) {
   .intro {
     /* gap: 290px; */
-    margin: 0 0 0 24px;
+    margin: 0 0 100px 24px;
     padding-top: 36px;
   }
   .intro__content {
@@ -73,8 +70,8 @@
   }
   .intro__logo {
     width: 140px;
+    /* height: 48px; */
     margin-bottom: 67px;
-    
   }
   .intro__title {
     font-size: 28px;
@@ -94,13 +91,12 @@
     top: 40px;
     left: 55%;
   }
-
 }
 
 @media screen and (max-width: 800px) {
   .intro {
     /* gap: 216px; */
-    margin: 0 0 0 38px;
+    margin: 0 0 100px 38px;
     padding-top: 48px;
   }
 
@@ -124,24 +120,25 @@
     top: -36px;
     left: 36%;
   }
-
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 705px) {
   .intro {
-    /* gap: 1px; */
-    background-image: url(../images/girl_main_mobile.png);
-    margin: 0 0 0 24px;
-    padding-top: 32px;
-    background-size: 250px 490px;
-
+    background: url(../images/girl_main_mobile.png) top right / 267px no-repeat;
+    margin: 0 0 64px 0;
+    padding-top: 24px;
   }
   .intro__logo {
-    margin: 0 0 427px 0;
+    margin: 0 0 417px 24px;
+  }
+  .intro__content {
+    align-items: center;
+    padding: 0 24px;
   }
   .intro__title {
     font-size: 28px;
     line-height: 32px;
+    max-width: 311px;
   }
   .intro__subtitle {
     font-size: 14px;
