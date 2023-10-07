@@ -1,10 +1,9 @@
 .cards {
   position: relative;
-  /* min-height: 832px; */
   padding: 55px 64px 35px;
   overflow: hidden;
   background: url(../images/background.png) center / 100% 100% no-repeat;
-  margin-bottom: 246px;
+  margin-bottom: 350px;
 }
 
 .cards__svg {
@@ -94,6 +93,9 @@ width: 100%;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  height: 120px;
+  overflow-y: auto;
+
   
 }
 .card__link {
@@ -176,7 +178,7 @@ progress::-moz-progress-bar {
 @media screen and (max-width: 960px) {
 .cards {
   padding: 32px 24px 50px;
-  margin-bottom: 111px;
+  margin-bottom: 200px;
 }
 .card__chaild {
    font-size: 18px; 
@@ -198,7 +200,7 @@ progress::-moz-progress-bar {
 @media screen and (max-width: 800px) {
 .cards {
   padding: 48px 48px 45px 48px;
-  margin-bottom: 138px;
+  
 }
 .card__target {
 font-size: 16px; 
@@ -224,7 +226,7 @@ font-size: 16px;
 @media screen and (max-width: 705px) {
 .cards {
   padding: 32px 24px 50px;
-  margin-bottom: 64px;
+  margin-bottom: 150px;
 }
 .card__target {
 font-size: 14px; 
