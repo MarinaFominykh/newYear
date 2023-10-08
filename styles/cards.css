@@ -170,7 +170,12 @@ progress::-webkit-progress-value {
   background: #fa6334;
 }
 progress::-moz-progress-bar {
-  /* style rules */
+  border-radius: 21px;
+  background: #eee;
+}
+progress::-moz-progress-value {
+  border-radius: 21px;
+  background: #fa6334;
 }
 
 @media screen and (max-width: 960px) {
