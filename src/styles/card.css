@@ -1,35 +1,13 @@
-.cards {
-  position: relative;
-  padding: 55px 64px 35px;
-  overflow: hidden;
-  background: url(../images/background.png) center / 100% 100% no-repeat;
-  margin-bottom: 350px;
-}
-
-.cards__svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.swiper {
-  width: 100%;
-
-}
-.swiper-slide {
-  width: 100px;
-  border-radius: 10px;
-  background: #fff;
-  padding: 16px;
-}
-.slide {
+.card {
+  max-width: 704px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
+  padding: 40px;
+  border: 1px red solid;
 }
-.slide__img-wrp {
+.card__img-wrp {
   width: 100%;
   max-height: 300px;
   height: auto;
@@ -39,26 +17,25 @@
   margin-bottom: -12px;
 }
 
-.slide__img {
+.card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-.slide__target {
-width: 100%;
+.card__target {
+  width: 100%;
   border-radius: 38px;
   background: #ffefe7;
   color: #8d7f7f;
   text-align: center;
   font-family: 'Inter', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px;
-  
+  line-height: 24px;
 }
-.slide__chaild {
+.card__chaild {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,16 +46,16 @@ width: 100%;
   font-weight: 500;
   line-height: 30px;
 }
-.slide__label {
+.card__label {
   color: #464646;
   font-family: 'Inter', Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 24px;
   margin-bottom: -8px;
 }
-.slide__span {
+.card__span {
   color: #464646;
   font-family: 'Inter', Arial, sans-serif;
   font-size: 16px;
@@ -86,32 +63,36 @@ width: 100%;
   font-weight: 700;
   line-height: 20px;
 }
-.slide__preview {
+.card__preview {
   color: #464646;
   font-family: 'Inter', Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
-  height: 120px;
-  overflow-y: auto;
-
-  
+  line-height: normal;
 }
-
-.slide__button {
-    padding: 0;
-    background-color: transparent;
-    color:#FA6334;
-font-family: 'Inter', Arial, sans-serif;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 20px;
+.card__button {
+  padding: 0;
+  background-color: transparent;
+  color: #fa6334;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-.slide__button:hover {
-    opacity: 1;
-    text-decoration: underline;
+.card__button:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.card__link {
+  color: #fff;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  text-transform: uppercase;
 }
 .swiper__nav-container {
   margin: auto;
@@ -157,7 +138,7 @@ line-height: 20px;
 progress {
   width: 100%;
   height: 16px;
-  border-radius: 10px;
+  border-radius: 21px;
   background: #fff;
 }
 progress::-webkit-progress-bar {
@@ -173,75 +154,29 @@ progress::-moz-progress-bar {
 }
 
 @media screen and (max-width: 960px) {
-.cards {
-  padding: 32px 24px 50px;
-  margin-bottom: 200px;
-}
-.slide__chaild {
-   font-size: 18px; 
-   line-height: 24px;
-}
-.slide__preview {
-   font-size: 14px;
-   line-height: 18px;
-  
-}
-.slide__button {
-   font-size: 14px;
-   line-height: 16px;
-  
-}
-
+  .card {
+    padding: 24px;
+    max-width: 648px;
+  }
 }
 
 @media screen and (max-width: 800px) {
-.cards {
-  padding: 48px 48px 45px 48px;
-  
-}
-.slide__target {
-font-size: 16px; 
-   line-height: 20px;
-}
-.slide__chaild {
-   font-size: 18px; 
-   line-height: 22px;
-}
-.slide__preview {
-   font-size: 16px;
-   line-height: 20px;
-  
-}
-.slide__button {
-   font-size: 16px;
-   line-height: 20px;
-  
-}
-
+  .card__target {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .card__button {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 
 @media screen and (max-width: 705px) {
-.cards {
-  padding: 32px 24px 50px;
-  margin-bottom: 150px;
-}
-.slide__target {
-font-size: 14px; 
-   line-height: 16px;
-}
-.slide__chaild {
-   font-size: 18px; 
-   line-height: 24px;
-}
-.slide__preview {
-   font-size: 14px;
-   line-height: 18px;
-  
-}
-.cslide__button {
-   font-size: 14px;
-   line-height: 16px;
-  
-}
-
+  .card {
+    max-width: 375px;
+  }
+  .card__target {
+    font-size: 15px;
+    line-height: 24px;
+  }
 }
