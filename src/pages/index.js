@@ -1,24 +1,37 @@
-const background = document.querySelector('.banner__svg')
-const banner = document.querySelector('.banner')
+import { Section } from '../components/Section.js';
+import { Card } from '../components/Card.js';
+import { sectionSelector, templateSelector } from '../utils/constans.js';
+import { initialCards } from '../data/cards.js';
 
-const resizeListener = () => {
-const bannerWidth = window.getComputedStyle(banner).width
-const bannerHeight = window.getComputedStyle(banner).height
-const backgroundWidth = window.getComputedStyle(background).width
-const backgroundHeight = window.getComputedStyle(background).height
-background.style.width = bannerWidth
-background.style.height = bannerHeight
-  console.log("banner", {
-    width: bannerWidth,
-    height:bannerHeight
-  })
-    console.log("back", {
-    width: backgroundWidth,
-    height:backgroundHeight
-  })
+const cardList = new Section(
+  {
+    items: initialCards,
+    renderer: (data) => {
+      const cardElement = getCard(data);
+      cardList.addItem(cardElement);
+    },
+  },
+  sectionSelector
+);
 
+cardList.renderItems();
+
+function getCard(data) {
+  const card = new Card(data, templateSelector, handleCardClick);
+  return card.getCard();
 }
-// window.addEventListener("resize", resizeListener)
+
+function handleCardClick(
+  name,
+  age,
+  src,
+  target,
+  currentSum,
+  limit,
+  description
+) {
+  console.log(age, src, target, currentSum, limit, description);
+}
 
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
@@ -51,9 +64,8 @@ const swiper = new Swiper('.swiper', {
     960: {
       slidesPerView: 2.5,
     },
-      1200: {
+    1200: {
       slidesPerView: 3,
     },
-
   },
 });
