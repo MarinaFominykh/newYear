@@ -1,5 +1,6 @@
 import { Section } from '../components/Section.js';
 import { Card } from '../components/Card.js';
+import { Popup } from '../components/Popup.js';
 import { sectionSelector, templateSelector } from '../utils/constans.js';
 import { initialCards } from '../data/cards.js';
 
@@ -21,6 +22,9 @@ function getCard(data) {
   return card.getCard();
 }
 
+const popup = new Popup();
+popup.setEventListeners();
+
 function handleCardClick(
   name,
   age,
@@ -30,7 +34,13 @@ function handleCardClick(
   limit,
   description
 ) {
-  console.log(age, src, target, currentSum, limit, description);
+  popup.open(name,
+  age,
+  src,
+  target,
+  currentSum,
+  limit,
+  description)
 }
 
 const swiper = new Swiper('.swiper', {
@@ -52,7 +62,7 @@ const swiper = new Swiper('.swiper', {
   centeredSlides: false,
   speed: 800,
   simulateTouch: true,
-  grabCursor: true,
+  // grabCursor: true,
   breakpoints: {
     705: {
       slidesPerView: 2,

@@ -1,15 +1,10 @@
 .intro {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: flex-start; */
-  margin: 0 0 100px 64px;
-  padding-top: 61px;
+  margin: 0 0 100px 0px;
+  padding: 61px 0 0 64px;
   position: relative;
-  /* gap: 368px; */
-  background-image: url(../images/girl_main.png);
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: contain;
+  background: url(../images/girl_main.png) right top / contain no-repeat,
+    url(../images/snowflake.svg) 43% -81px / 194px no-repeat,
+    url(../images/snowflake.svg) 73% 341px / 194px no-repeat;
 }
 .intro__content {
   display: flex;
@@ -27,7 +22,7 @@
   font-size: 64px;
   font-style: normal;
   font-weight: 600;
-  line-height: 72px; /* 112.5% */
+  line-height: 72px;
   text-transform: uppercase;
 }
 .intro__subtitle {
@@ -41,6 +36,8 @@
   line-height: 30px;
 }
 .intro__button {
+  color: #fff;
+  text-decoration: none;
 }
 
 .intro__snowflake {
@@ -61,16 +58,17 @@
 
 @media screen and (max-width: 960px) {
   .intro {
-    /* gap: 290px; */
-    margin: 0 0 100px 24px;
-    padding-top: 36px;
+    margin: 0 0 100px 0;
+    padding: 36px 0 50px 24px;
+    background: url(../images/girl_main.png) right top / contain no-repeat,
+      url(../images/snowflake.svg) 68% 78px / 91px no-repeat,
+      url(../images/snowflake.svg) -21px 259px / 91px no-repeat;
   }
   .intro__content {
     gap: 16px;
   }
   .intro__logo {
     width: 140px;
-    /* height: 48px; */
     margin-bottom: 67px;
   }
   .intro__title {
@@ -95,9 +93,11 @@
 
 @media screen and (max-width: 800px) {
   .intro {
-    /* gap: 216px; */
-    margin: 0 0 100px 38px;
-    padding-top: 48px;
+    margin: 0 0 100px 0;
+    padding: 48px 0 0 38px;
+    background: url(../images/girl_main.png) right top / contain no-repeat,
+      url(../images/snowflake.svg) 45% -23px / 91px no-repeat,
+      url(../images/snowflake.svg) 68% 240px / 91px no-repeat;
   }
 
   .intro__logo {
@@ -124,7 +124,9 @@
 
 @media screen and (max-width: 705px) {
   .intro {
-    background: url(../images/girl_main_mobile.png) top right / 267px no-repeat;
+    background: url(../images/girl_main_mobile.png) top right / 267px no-repeat,
+      url(../images/snowflake.svg) -11% 204px / 91px no-repeat,
+      url(../images/snowflake.svg) 43% 358px / 91px no-repeat;
     margin: 0 0 64px 0;
     padding-top: 24px;
   }

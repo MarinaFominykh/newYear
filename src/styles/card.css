@@ -5,7 +5,9 @@
   gap: 16px;
   align-items: center;
   padding: 40px;
-  border: 1px red solid;
+  background-color: #fff;
+  border-radius: 10px;
+   
 }
 .card__img-wrp {
   width: 100%;

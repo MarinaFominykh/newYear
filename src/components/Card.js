@@ -45,8 +45,8 @@ export class Card {
     this._cardImage.src = `./images/${this._src}.png`;
     this._cardImage.alt = this._name;
     this._cardTarget.textContent = this._target;
-    this._cardCurrentSum.textContent= this._currentSum;
-    this._cardLimit.textContent = this._limit;
+    this._cardCurrentSum.textContent= `${this._currentSum}₽`;
+    this._cardLimit.textContent = `${this._limit}₽`;
     this._cardProgressBar.value = this._currentSum;
     this._cardProgressBar.max = this._limit;
     this._cardHistory.textContent = this._description;

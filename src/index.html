@@ -21,11 +21,8 @@
             Участвуйте в марафоне добра и вы поможете детям сделать шаг к
             полноценной, счастливой и действительно здоровой жизни.
           </p>
-          <button class="button intro__button">Хочу помочь</button>
+          <a href="#donations" class="button intro__button">Хочу помочь</a>
         </div>
-        <!-- <div class="intro__img-wrp">
-          <img class="intro__img" src="./images/girl_main.png" alt="Девочка" />
-        </div> -->
       </section>
       <section class="marathon">
         <div class="marathon__img-wrp">
@@ -48,9 +45,11 @@
           необходимого лечения детям из приемных семей и
           <span class="marathon__span">приглашаем вас присоединиться!</span>
         </p>
-        <button class="button marathon__button">Хочу&nbsp;помочь</button>
+        <a href="#donations" class="button marathon__button"
+          >Хочу&nbsp;помочь</a
+        >
       </section>
-      <section class="donations">
+      <section class="donations" id="donations">
         <form class="donations__form" name="form" id="form">
           <fieldset class="donations__fields">
             <input
@@ -68,6 +67,7 @@
             <input
               class="donations__input"
               type="text"
+              required
               placeholder="Компания"
             />
           </fieldset>
@@ -100,158 +100,7 @@
       </section>
       <section class="cards">
         <div class="swiper">
-          <ul class="slides swiper-wrapper list">
-            <!-- <li class="swiper-slide">
-              <article class="slide">
-                <div class="slide__img-wrp">
-                  <img src="./images/girl_intro.png" class="slide__img" />
-                </div>
-                <div class="slide__target">На лечение и медикаменты</div>
-                <div class="slide__chaild">
-                  <p class="text slide__name">Имя 1</p>
-                  <p class="text slide__age">10 лет</p>
-                </div>
-                <label class="slide__label" for="progress"
-                  >Собрано <span class="slide__span">800 965 ₽</span> из
-                  <span class="slide__span">1 000 000 ₽</span></label
-                >
-                <progress
-                  class="slide__progress"
-                  id="progress"
-                  value="20"
-                  max="100"
-                ></progress>
-
-                <p class="slide__preview text">
-                  Из-за проблем со здоровьем Сережа обучается дома. Ему
-                  необходимо постоянно принимать лекарства, которые помогают ему
-                  учиться
-                </p>
-                <button class="button slide__link">Хочу&nbsp;помочь</button>
-                <button class="button slide__button">Узнать историю</button>
-              </article>
-            </li>
-            <li class="swiper-slide">
-              <article class="slide">
-                <div class="slide__img-wrp">
-                  <img src="./images/girl_intro.png" class="slide__img" />
-                </div>
-                <div class="slide__target">На лечение и медикаменты</div>
-                <div class="slide__chaild">
-                  <p class="text slide__name">Имя 1</p>
-                  <p class="text slide__age">10 лет</p>
-                </div>
-                <label class="slide__label" for="progress"
-                  >Собрано <span class="slide__span">800 965 ₽</span> из
-                  <span class="slide__span">1 000 000 ₽</span></label
-                >
-                <progress
-                  class="slide__progress"
-                  id="progress"
-                  value="20"
-                  max="100"
-                ></progress>
-
-                <p class="slide__preview text">
-                  Из-за проблем со здоровьем Сережа обучается дома. Ему
-                  необходимо постоянно принимать лекарства, которые помогают ему
-                  учиться
-                </p>
-                <button class="button slide__link">Хочу&nbsp;помочь</button>
-                <button class="button slide__button">Узнать историю</button>
-              </article>
-            </li>
-            <li class="swiper-slide">
-              <article class="slide">
-                <div class="slide__img-wrp">
-                  <img src="./images/girl_intro.png" class="slide__img" />
-                </div>
-                <div class="slide__target">На лечение и медикаменты</div>
-                <div class="slide__chaild">
-                  <p class="text slide__name">Имя 1</p>
-                  <p class="text slide__age">10 лет</p>
-                </div>
-                <label class="slide__label" for="progress"
-                  >Собрано <span class="slide__span">800 965 ₽</span> из
-                  <span class="slide__span">1 000 000 ₽</span></label
-                >
-                <progress
-                  class="slide__progress"
-                  id="progress"
-                  value="20"
-                  max="100"
-                ></progress>
-
-                <p class="slide__preview text">
-                  Из-за проблем со здоровьем Сережа обучается дома. Ему
-                  необходимо постоянно принимать лекарства, которые помогают ему
-                  учиться
-                </p>
-                <button class="button slide__link">Хочу&nbsp;помочь</button>
-                <button class="button slide__button">Узнать историю</button>
-              </article>
-            </li>
-            <li class="swiper-slide">
-              <article class="slide">
-                <div class="slide__img-wrp">
-                  <img src="./images/girl_intro.png" class="slide__img" />
-                </div>
-                <div class="slide__target">На лечение и медикаменты</div>
-                <div class="slide__chaild">
-                  <p class="text slide__name">Имя 1</p>
-                  <p class="text slide__age">10 лет</p>
-                </div>
-                <label class="slide__label" for="progress"
-                  >Собрано <span class="slide__span">800 965 ₽</span> из
-                  <span class="slide__span">1 000 000 ₽</span></label
-                >
-                <progress
-                  class="slide__progress"
-                  id="progress"
-                  value="20"
-                  max="100"
-                ></progress>
-
-                <p class="slide__preview text">
-                  Из-за проблем со здоровьем Сережа обучается дома. Ему
-                  необходимо постоянно принимать лекарства, которые помогают ему
-                  учиться
-                </p>
-                <button class="button slide__link">Хочу&nbsp;помочь</button>
-                <button class="button slide__button">Узнать историю</button>
-              </article>
-            </li>
-            <li class="swiper-slide">
-              <article class="slide">
-                <div class="slide__img-wrp">
-                  <img src="./images/girl_intro.png" class="slide__img" />
-                </div>
-                <div class="slide__target">На лечение и медикаменты</div>
-                <div class="slide__chaild">
-                  <p class="text slide__name">Имя 1</p>
-                  <p class="text slide__age">10 лет</p>
-                </div>
-                <label class="slide__label" for="progress"
-                  >Собрано <span class="slide__span">800 965 ₽</span> из
-                  <span class="slide__span">1 000 000 ₽</span></label
-                >
-                <progress
-                  class="slide__progress"
-                  id="progress"
-                  value="20"
-                  max="100"
-                ></progress>
-
-                <p class="slide__preview text">
-                  Из-за проблем со здоровьем Сережа обучается дома. Ему
-                  необходимо постоянно принимать лекарства, которые помогают ему
-                  учиться
-                </p>
-                <button class="button slide__link">Хочу&nbsp;помочь</button>
-                <button class="button slide__button">Узнать историю</button>
-              </article>
-            </li> -->
-          </ul>
+          <ul class="slides swiper-wrapper list"></ul>
         </div>
         <div class="swiper__nav-container">
           <div class="navigation prev">
@@ -412,7 +261,10 @@
     <footer class="footer">
       <p class="text footer__text">
         Нажимая на кнопку “Пожертвовать”, вы соглашаетесь с условиями
-        <a href="#" class="footer__link link"
+        <a
+          href="https://sirota.ru/publichnaya-oferta.html"
+          target="_blank"
+          class="footer__link link"
           >публичной оферты о заключении договора пожертвования.</a
         >
       </p>
@@ -423,36 +275,40 @@
       <p class="text footer__text">
         По всем вопросам, связанными с проведением акции, пожалуйста,
         обращайтесь по электронной почте.
-        <a href="#" class="footer__link link">по электронной почте.</a>
+        <a
+          href="mailto:natalya.vasilyeva@sirota.ru"
+          target="_blank"
+          class="footer__link link"
+          >по электронной почте.</a
+        >
       </p>
     </footer>
-    <article class="card">
-      <div class="card__img-wrp">
-        <img src="./images/girl_intro.png" class="card__img" />
-      </div>
-      <div class="card__target">На лечение и медикаменты</div>
-      <div class="card__chaild">
-        <p class="text card__name">Имя 1</p>
-        <p class="text card__age">10 лет</p>
-      </div>
-      <label class="card__label" for="progress"
-        >Собрано <span class="card__span">800 965 ₽</span> из
-        <span class="card__span">1 000 000 ₽</span></label
-      >
-      <progress
-        class="card__progress"
-        id="progress"
-        value="20"
-        max="100"
-      ></progress>
+    <aside class="popup">
+      <article class="card">
+        <div class="card__img-wrp">
+          <img src="" class="card__img" />
+        </div>
+        <div class="card__target"></div>
+        <div class="card__chaild">
+          <p class="text card__name"></p>
+          <p class="text card__age"></p>
+        </div>
+        <label class="card__label" for="progress"
+          >Собрано <span class="card__span card__span_sum"></span> из
+          <span class="card__span card__span_limit"></span
+        ></label>
+        <progress class="card__progress" id="progress"></progress>
 
-      <p class="card__preview text">
-        Из-за проблем со здоровьем Сережа обучается дома. Ему необходимо
-        постоянно принимать лекарства, которые помогают ему учиться
-      </p>
-      <button class="button card__link">Хочу&nbsp;помочь</button>
-      <button class="button card__button">Закрыть историю</button>
-    </article>
+        <p class="card__preview text"></p>
+        <a href="#donations" class="button card__link popup__close link"
+          >Хочу&nbsp;помочь</a
+        >
+        <button class="button card__button popup__close">
+          Закрыть историю
+        </button>
+      </article>
+    </aside>
+
     <template class="card-template">
       <li class="swiper-slide">
         <article class="slide">
@@ -476,7 +332,7 @@
           ></progress>
 
           <p class="slide__preview text"></p>
-          <button class="button slide__link">Хочу&nbsp;помочь</button>
+          <a href="#donations" class="button slide__link">Хочу&nbsp;помочь</a>
           <button class="button slide__button">Узнать историю</button>
         </article>
       </li>

@@ -34,6 +34,7 @@
   line-height: 20px;
 }
 
+
 .donations__quantity {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
