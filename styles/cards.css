@@ -171,12 +171,11 @@ progress::-webkit-progress-value {
 }
 progress::-moz-progress-bar {
   border-radius: 21px;
-  background: #eee;
-}
-progress::-moz-progress-value {
-  border-radius: 21px;
+  border: none;
   background: #fa6334;
+
 }
+
 
 @media screen and (max-width: 960px) {
   .cards {

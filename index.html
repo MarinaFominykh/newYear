@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Щедрый Новый Год</title>
+    <link rel="icon" href="./images/fav.svg" type="image/svg+xml" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
@@ -244,17 +245,16 @@
               </a>
             </li>
             <li>
-              <a
-                href="https://www.youtube.com/@user-uq9nk9xo3y"
-                target="_blank"
-                class="social__link"
+              <button
+                class="social__link share-link tooltip"
+                data-tooltip="Поделиться ссылкой"
               >
                 <img
                   src="./images/link.svg"
                   alt="Поделиться ссылкой"
                   class="social__icon"
                 />
-              </a>
+              </button>
             </li>
           </ul>
         </div>
@@ -310,7 +310,7 @@
         <progress class="card__progress" id="progress"></progress>
 
         <p class="card__preview text"></p>
-        <a href="#donations" class="button card__link popup__close link"
+        <a href="#donations" class="button card__link popup__close"
           >Хочу&nbsp;помочь</a
         >
         <button class="button card__button popup__close">

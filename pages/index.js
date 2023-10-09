@@ -1,7 +1,7 @@
 import { Section } from '../components/Section.js';
 import { Card } from '../components/Card.js';
 import { Popup } from '../components/Popup.js';
-import { sectionSelector, templateSelector } from '../utils/constans.js';
+import { sectionSelector, templateSelector, shareLink } from '../utils/constans.js';
 import { initialCards } from '../data/cards.js';
 
 const cardList = new Section(
@@ -75,3 +75,18 @@ const swiper = new Swiper('.swiper', {
     },
   },
 });
+
+function copyURL() {
+  let currentURL = window.location.href;
+   navigator.clipboard.writeText(currentURL)
+    .then(function() {
+      shareLink.dataset.tooltip = 'Ссылка скопирована'
+      console.log('Текст скопирован');
+    })
+    .catch(function(err) {
+      shareLink.dataset.tooltip = 'Ошибка при копировании'
+    });
+  
+}
+
+shareLink.addEventListener('click', copyURL)

@@ -58,19 +58,43 @@
 
 .social__link {
   transition: 0.5s;
-
-
 }
 
 .social__link:hover {
   opacity: 0.7;
-
 
 }
 
 .social__icon {
   width: 64px;
   height: 64px;
+}
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.tooltip::after {
+  background: #fff;
+  border-radius: 8px 8px 8px 0px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  color: #000000;
+  content: attr(data-tooltip);
+  top: center;
+  left: 100px;
+  opacity: 0;
+  padding: 3px 7px;
+  position: absolute;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .social__img-wrp {
@@ -125,6 +149,10 @@
     width: 44px;
     height: 45px;
   }
+  .tooltip::after {
+  left: 80px;
+ 
+}
 
 }
 
