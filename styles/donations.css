@@ -43,7 +43,7 @@
   row-gap: 8px;
 }
 
-.donations__item {
+.donations__span-visible {
   padding: 8px 7px;
   border-radius: 20px;
   background: #ffefe7;
@@ -56,10 +56,22 @@
   text-align: center;
   cursor: pointer;
   transition: 0.5s;
+  display: block;
 }
 
-.donations__item:hover {
+.donations__span-visible:hover {
   opacity: 0.7;
+}
+.donation__input-sum {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+} 
+.donation__input-sum:checked + .donations__span-visible {
+  color: #ffefe7;
+  background: #fa6334;
 }
 .donations__button {
   width: 100%;

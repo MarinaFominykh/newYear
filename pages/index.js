@@ -1,8 +1,26 @@
 import { Section } from '../components/Section.js';
 import { Card } from '../components/Card.js';
 import { Popup } from '../components/Popup.js';
-import { sectionSelector, templateSelector, shareLink } from '../utils/constans.js';
+import { FormValues } from '../components/FormValues.js';
+import {
+  sectionSelector,
+  templateSelector,
+  shareLink,
+} from '../utils/constans.js';
 import { initialCards } from '../data/cards.js';
+
+
+const form = new FormValues({
+  submitForm: (data) => {
+    //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
+    console.log(data)
+    form.reset();
+  },
+});
+
+// Отправка формы:
+form.setEventListeners();
+
 
 const cardList = new Section(
   {
@@ -15,16 +33,21 @@ const cardList = new Section(
   sectionSelector
 );
 
+// рендер слайдов:
 cardList.renderItems();
 
+// генерация слайдов:
 function getCard(data) {
   const card = new Card(data, templateSelector, handleCardClick);
   return card.getCard();
 }
 
 const popup = new Popup();
+
+//открытие и закрытие модального окна:
 popup.setEventListeners();
 
+//обработка клика по кнопке "узнать историю"
 function handleCardClick(
   name,
   age,
@@ -34,15 +57,10 @@ function handleCardClick(
   limit,
   description
 ) {
-  popup.open(name,
-  age,
-  src,
-  target,
-  currentSum,
-  limit,
-  description)
+  popup.open(name, age, src, target, currentSum, limit, description);
 }
 
+// инициализация слайдера:
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -78,15 +96,16 @@ const swiper = new Swiper('.swiper', {
 
 function copyURL() {
   let currentURL = window.location.href;
-   navigator.clipboard.writeText(currentURL)
-    .then(function() {
-      shareLink.dataset.tooltip = 'Ссылка скопирована'
+  navigator.clipboard
+    .writeText(currentURL)
+    .then(function () {
+      shareLink.dataset.tooltip = 'Ссылка скопирована';
       console.log('Текст скопирован');
     })
-    .catch(function(err) {
-      shareLink.dataset.tooltip = 'Ошибка при копировании'
+    .catch(function (err) {
+      shareLink.dataset.tooltip = 'Ошибка при копировании';
     });
-  
 }
 
-shareLink.addEventListener('click', copyURL)
+// Копирование ссылки на страницу в буфер:
+shareLink.addEventListener('click', copyURL);

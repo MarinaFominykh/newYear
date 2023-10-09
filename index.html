@@ -44,46 +44,120 @@
         <p class="marathon__description-btm text">
           Весь декабрь мы будем собирать средства, которые пойдут на оплату
           необходимого лечения детям из приемных семей и
-          <span class="marathon__span">приглашаем вас присоединиться!</span>
+          <a href="#donations" class="marathon__span link"
+            >приглашаем вас присоединиться!</a
+          >
         </p>
         <a href="#donations" class="button marathon__button"
           >Хочу&nbsp;помочь</a
         >
       </section>
       <section class="donations" id="donations">
-        <form class="donations__form" name="form" id="form">
+        <form class="donations__form" name="donations" id="form">
           <fieldset class="donations__fields">
             <input
-              class="donations__input"
+              class="donations__input input"
               type="text"
               required
               placeholder="Ваше имя"
+              name="name"
             />
             <input
-              class="donations__input"
+              class="donations__input input"
               type="email"
               required
-              placeholder="Ваше почта"
+              placeholder="Ваша почта"
+              name="email"
             />
             <input
-              class="donations__input"
+              class="donations__input input"
               type="text"
               required
               placeholder="Компания"
+              name="company"
             />
           </fieldset>
           <ul class="donations__quantity list">
-            <li class="donations__item">300</li>
-            <li class="donations__item">500</li>
-            <li class="donations__item">1000</li>
-            <li class="donations__item">3000</li>
-            <li class="donations__item">5000</li>
-            <li class="donations__item">10000</li>
+            <li>
+              <label for="sum_300" class="donations__label">
+                <input
+                  class="donation__input-sum input"
+                  type="radio"
+                  name="sum"
+                  id="sum_300"
+                  value="300"
+                />
+                <span class="donations__span-visible">300</span>
+              </label>
+            </li>
+            <li>
+              <label for="sum_500" class="donations__label">
+                <input
+                  class="donation__input-sum input"
+                  type="radio"
+                  name="sum"
+                  id="sum_500"
+                  value="500"
+                />
+                <span class="donations__span-visible">500</span>
+              </label>
+            </li>
+            <li>
+              <label for="sum_1000" class="donations__label">
+                <input
+                  class="donation__input-sum input"
+                  type="radio"
+                  name="sum"
+                  id="sum_1000"
+                  value="1000"
+                />
+                <span class="donations__span-visible">1000</span>
+              </label>
+            </li>
+            <li>
+              <label for="sum_3000" class="donations__label">
+                <input
+                  class="donation__input-sum input"
+                  type="radio"
+                  name="sum"
+                  id="sum_3000"
+                  value="3000"
+                />
+                <span class="donations__span-visible">3000</span>
+              </label>
+            </li>
+            <li>
+              <label for="sum_5000" class="donations__label">
+                <input
+                  class="donation__input-sum input"
+                  type="radio"
+                  name="sum"
+                  id="sum_5000"
+                  value="5000"
+                />
+                <span class="donations__span-visible">5000</span>
+              </label>
+            </li>
+            <li>
+              <label for="sum_10000" class="donations__label">
+                <input
+                  class="donation__input-sum input"
+                  type="radio"
+                  name="sum"
+                  id="sum_10000"
+                  value="10000"
+                />
+                <span class="donations__span-visible">10000</span>
+              </label>
+            </li>
           </ul>
           <input
-            class="donations__input"
+            class="donations__input input"
             type="number"
             placeholder="Другая сумма"
+            maxlength="12"
+            min="1"
+            name="otherSum"
           />
           <button class="button donations__button">Пожертвовать</button>
           <p class="donations__remark text">
@@ -156,9 +230,9 @@
 
         <ul class="banner__list list">
           <li class="banner__item">
-            <p class="banner__text text">31</p>
+            <p class="banner__text text">36</p>
             <p class="banner__text-ligth text">
-              ребенок получил помощь в рамках
+              детей получили помощь в рамках
               <a
                 class="banner__link link"
                 href="https://sirota.ru/events/gny23.html"
@@ -169,15 +243,15 @@
             </p>
           </li>
           <li class="banner__item">
-            <p class="banner__text text">1.2млн</p>
+            <p class="banner__text text">1.4 млн</p>
             <p class="banner__text-ligth text">
               на такую сумму фонд оказал помощь семьям в 2022 году
             </p>
           </li>
           <li class="banner__item">
-            <p class="banner__text text">1&nbsp;637</p>
+            <p class="banner__text text">1&nbsp;555</p>
             <p class="banner__text-ligth text">
-              семей, в которых воспитывается 3 281 ребенок получили помощь в
+              семей, в которых воспитывается 3 243 ребенок, получили помощь в
               2022 году
             </p>
           </li>
@@ -278,13 +352,10 @@
           >публичной оферты о заключении договора пожертвования.</a
         >
       </p>
-      <p class="text footer__text">
-        Вы будете перенаправлены на защищенную страницу сервиса онлайн-платежей
-        ЮKassa, где сможете выбрать удобный Вам способ пожертвования.
-      </p>
+
       <p class="text footer__text">
         По всем вопросам, связанными с проведением акции, пожалуйста,
-        обращайтесь по электронной почте.
+        обращайтесь
         <a
           href="mailto:natalya.vasilyeva@sirota.ru"
           target="_blank"

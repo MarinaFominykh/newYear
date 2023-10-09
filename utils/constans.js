@@ -1,4 +1,5 @@
 const sectionSelector = '.slides';
 const templateSelector = '.card-template';
 const shareLink = document.querySelector('.share-link');
-export {sectionSelector, templateSelector, shareLink}
+const donations = document.querySelectorAll('.donations__item');
+export {sectionSelector, templateSelector, shareLink, donations}
