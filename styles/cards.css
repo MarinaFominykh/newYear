@@ -16,18 +16,21 @@
 .swiper {
   width: 100%;
 }
+
 .swiper-slide {
   width: 100px;
   border-radius: 10px;
   background: #fff;
   padding: 16px;
 }
+
 .slide {
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
 }
+
 .slide__img-wrp {
   width: 100%;
   max-height: 300px;
@@ -44,6 +47,7 @@
   object-fit: cover;
   object-position: center;
 }
+
 .slide__target {
   width: 100%;
   border-radius: 38px;
@@ -56,6 +60,7 @@
   font-weight: 500;
   line-height: 20px;
 }
+
 .slide__chaild {
   display: flex;
   justify-content: space-between;
@@ -67,6 +72,7 @@
   font-weight: 500;
   line-height: 30px;
 }
+
 .slide__label {
   color: #464646;
   font-family: 'Inter', Arial, sans-serif;
@@ -76,6 +82,7 @@
   line-height: 20px;
   margin-bottom: -8px;
 }
+
 .slide__span {
   color: #464646;
   font-family: 'Inter', Arial, sans-serif;
@@ -84,6 +91,7 @@
   font-weight: 700;
   line-height: 20px;
 }
+
 .slide__preview {
   color: #464646;
   font-family: 'Inter', Arial, sans-serif;
@@ -91,10 +99,14 @@
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  /* height: auto; */
   height: 120px;
   overflow-y: auto;
 }
+
+.slide__preview_opened {
+  height: auto;
+}
+
 .slide__link {
   text-decoration: none;
 }
@@ -109,12 +121,14 @@
   font-weight: 700;
   line-height: 20px;
 }
+
 .slide__button:hover {
   opacity: 1;
   text-decoration: underline;
 }
-.slide__link {
-}
+
+.slide__link {}
+
 .swiper__nav-container {
   margin: auto;
   display: flex;
@@ -122,23 +136,29 @@
   align-items: center;
   gap: 16px;
 }
+
 .navigation {
   position: relative;
   align-self: center;
   cursor: pointer;
   transition: 0.5s;
 }
+
 .navigation:hover {
   opacity: 0.7;
 }
+
+.cards__pagination-wrp {
+  max-width: 160px;
+}
+
 .swiper-pagination {
+  position: absolute;
   width: initial !important;
   position: relative;
   align-self: center;
   bottom: 0 !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
 
 .swiper-pagination-bullet {
@@ -162,14 +182,17 @@ progress {
   border-radius: 10px;
   background: #fff;
 }
+
 progress::-webkit-progress-bar {
   border-radius: 21px;
   background: #eee;
 }
+
 progress::-webkit-progress-value {
   border-radius: 21px;
   background: #fa6334;
 }
+
 progress::-moz-progress-bar {
   border-radius: 21px;
   border: none;
@@ -183,14 +206,17 @@ progress::-moz-progress-bar {
     padding: 32px 24px 50px;
     margin-bottom: 200px;
   }
+
   .slide__chaild {
     font-size: 18px;
     line-height: 24px;
   }
+
   .slide__preview {
     font-size: 14px;
     line-height: 18px;
   }
+
   .slide__button {
     font-size: 14px;
     line-height: 16px;
@@ -201,18 +227,22 @@ progress::-moz-progress-bar {
   .cards {
     padding: 48px 48px 45px 48px;
   }
+
   .slide__target {
     font-size: 16px;
     line-height: 20px;
   }
+
   .slide__chaild {
     font-size: 18px;
     line-height: 22px;
   }
+
   .slide__preview {
     font-size: 16px;
     line-height: 20px;
   }
+
   .slide__button {
     font-size: 16px;
     line-height: 20px;
@@ -224,18 +254,22 @@ progress::-moz-progress-bar {
     padding: 32px 24px 50px;
     margin-bottom: 150px;
   }
+
   .slide__target {
     font-size: 14px;
     line-height: 16px;
   }
+
   .slide__chaild {
     font-size: 18px;
     line-height: 24px;
   }
+
   .slide__preview {
     font-size: 14px;
     line-height: 18px;
   }
+
   .cslide__button {
     font-size: 14px;
     line-height: 16px;

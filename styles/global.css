@@ -3,6 +3,12 @@
   /* border: 1px red solid; */
 }
 
+.page.opened {
+  /* height: 100vh; */
+  overflow-y: hidden;
+
+}
+
 .button {
   padding: 9px 56px;
   border-radius: 20px;
@@ -23,6 +29,7 @@
 .button:hover {
   opacity: 0.7;
 }
+
 .text {
   margin: 0;
 }
@@ -34,11 +41,17 @@
 }
 
 .link {
-  color:  #FA6334;
+  color: #FA6334;
   text-decoration: none;
 }
+
 .link:hover {
   text-decoration: underline;
+}
+
+.fields {
+  border: none;
+  padding: 0;
 }
 
 @media screen and (max-width: 960px) {
@@ -49,14 +62,14 @@
 }
 
 @media screen and (max-width: 800px) {
-    .button {
+  .button {
     font-size: 24px;
     line-height: 32px;
   }
 }
 
 @media screen and (max-width: 540px) {
-    .button {
+  .button {
     font-size: 20px;
     line-height: 24px;
   }

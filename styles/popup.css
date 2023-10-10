@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .popup_opened {
@@ -18,4 +19,6 @@
     opacity: 1;
     transition: .5s;
     z-index: 10;
+    overflow: auto;
+
 }

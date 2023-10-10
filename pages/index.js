@@ -6,21 +6,35 @@ import {
   sectionSelector,
   templateSelector,
   shareLink,
+  donationsFormSelector,
+  personalFormSelector
 } from '../utils/constans.js';
 import { initialCards } from '../data/cards.js';
 
 
-const form = new FormValues({
+//Общая форма сбора:
+const formDonations = new FormValues({
   submitForm: (data) => {
     //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
     console.log(data)
-    form.reset();
+    formDonations.reset();
   },
-});
+}, donationsFormSelector);
 
 // Отправка формы:
-form.setEventListeners();
+formDonations.setEventListeners();
 
+// Персональная форма сбора:
+const formPersonalDonation = new FormValues({
+  submitForm: (data) => {
+    //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
+    console.log(data)
+    formPersonalDonation.reset();
+  },
+}, personalFormSelector);
+
+//Отправка формы:
+formPersonalDonation.setEventListeners();
 
 const cardList = new Section(
   {
@@ -49,15 +63,9 @@ popup.setEventListeners();
 
 //обработка клика по кнопке "узнать историю"
 function handleCardClick(
-  name,
-  age,
-  src,
-  target,
-  currentSum,
-  limit,
-  description
+  id
 ) {
-  popup.open(name, age, src, target, currentSum, limit, description);
+  popup.open(id);
 }
 
 // инициализация слайдера:
@@ -67,6 +75,7 @@ const swiper = new Swiper('.swiper', {
   loop: true,
   pagination: {
     el: '.swiper-pagination',
+    dynamicBullets: true,
     clickable: true,
   },
   navigation: {

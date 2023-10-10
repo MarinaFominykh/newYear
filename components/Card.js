@@ -1,5 +1,6 @@
 export class Card {
   constructor(data, cardTemplateSelector, handleCardClick) {
+    this._id = data.id;
     this._name = data.name;
     this._age = data.age;
     this._src = data.src;
@@ -15,17 +16,24 @@ export class Card {
   }
 
   _setEventListeners() {
+    // this.cardOpenHistory.addEventListener('click', () => {
+    //   this._handleCardClick(
+    //     this._name,
+    //     this._age,
+    //     this._src,
+    //     this._target,
+    //     this._currentSum,
+    //     this._limit,
+    //     this._description
+    //   );
+    // });
     this.cardOpenHistory.addEventListener('click', () => {
-      this._handleCardClick(
-        this._name,
-        this._age,
-        this._src,
-        this._target,
-        this._currentSum,
-        this._limit,
-        this._description
-      );
-    });
+     this._cardHistory.classList.toggle('slide__preview_opened')
+
+    })
+     this._cardHelpButton.addEventListener('click', () => {
+      this._handleCardClick( this._id)
+     })
   }
 
   getCard = () => {
@@ -39,6 +47,7 @@ export class Card {
     this._cardLimit = this._cardElement.querySelector('.slide__span_limit');
     this._cardProgressBar = this._cardElement.querySelector('.slide__progress');
     this._cardHistory = this._cardElement.querySelector('.slide__preview');
+    this._cardHelpButton = this._cardElement.querySelector('.slide__link');
     
     this._cardName.textContent = this._name;
     this._cardAge.textContent =this._age;

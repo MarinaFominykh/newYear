@@ -54,7 +54,7 @@
       </section>
       <section class="donations" id="donations">
         <form class="donations__form" name="donations" id="form">
-          <fieldset class="donations__fields">
+          <fieldset class="donations__fields fields">
             <input
               class="donations__input input"
               type="text"
@@ -77,82 +77,75 @@
               name="company"
             />
           </fieldset>
-          <ul class="donations__quantity list">
-            <li>
-              <label for="sum_300" class="donations__label">
-                <input
-                  class="donation__input-sum input"
-                  type="radio"
-                  name="sum"
-                  id="sum_300"
-                  value="300"
-                />
-                <span class="donations__span-visible">300</span>
-              </label>
-            </li>
-            <li>
-              <label for="sum_500" class="donations__label">
-                <input
-                  class="donation__input-sum input"
-                  type="radio"
-                  name="sum"
-                  id="sum_500"
-                  value="500"
-                />
-                <span class="donations__span-visible">500</span>
-              </label>
-            </li>
-            <li>
-              <label for="sum_1000" class="donations__label">
-                <input
-                  class="donation__input-sum input"
-                  type="radio"
-                  name="sum"
-                  id="sum_1000"
-                  value="1000"
-                />
-                <span class="donations__span-visible">1000</span>
-              </label>
-            </li>
-            <li>
-              <label for="sum_3000" class="donations__label">
-                <input
-                  class="donation__input-sum input"
-                  type="radio"
-                  name="sum"
-                  id="sum_3000"
-                  value="3000"
-                />
-                <span class="donations__span-visible">3000</span>
-              </label>
-            </li>
-            <li>
-              <label for="sum_5000" class="donations__label">
-                <input
-                  class="donation__input-sum input"
-                  type="radio"
-                  name="sum"
-                  id="sum_5000"
-                  value="5000"
-                />
-                <span class="donations__span-visible">5000</span>
-              </label>
-            </li>
-            <li>
-              <label for="sum_10000" class="donations__label">
-                <input
-                  class="donation__input-sum input"
-                  type="radio"
-                  name="sum"
-                  id="sum_10000"
-                  value="10000"
-                />
-                <span class="donations__span-visible">10000</span>
-              </label>
-            </li>
-          </ul>
+          <fieldset class="donations__quantity fields">
+            <label for="sum_300" class="donations__label">
+              <input
+                class="donation__input-sum input radio"
+                type="radio"
+                name="sum"
+                id="sum_300"
+                value="300"
+              />
+              <span class="donations__span-visible">300</span>
+            </label>
+
+            <label for="sum_500" class="donations__label">
+              <input
+                class="donation__input-sum input radio"
+                type="radio"
+                name="sum"
+                id="sum_500"
+                value="500"
+              />
+              <span class="donations__span-visible">500</span>
+            </label>
+
+            <label for="sum_1000" class="donations__label">
+              <input
+                class="donation__input-sum input radio"
+                type="radio"
+                name="sum"
+                id="sum_1000"
+                value="1000"
+              />
+              <span class="donations__span-visible">1000</span>
+            </label>
+
+            <label for="sum_3000" class="donations__label">
+              <input
+                class="donation__input-sum input radio"
+                type="radio"
+                name="sum"
+                id="sum_3000"
+                value="3000"
+              />
+              <span class="donations__span-visible">3000</span>
+            </label>
+
+            <label for="sum_5000" class="donations__label">
+              <input
+                class="donation__input-sum input radio"
+                type="radio"
+                name="sum"
+                id="sum_5000"
+                value="5000"
+              />
+              <span class="donations__span-visible">5000</span>
+            </label>
+
+            <label for="sum_10000" class="donations__label">
+              <input
+                class="donation__input-sum input radio"
+                type="radio"
+                name="sum"
+                id="sum_10000"
+                value="10000"
+              />
+              <span class="donations__span-visible">10000</span>
+            </label>
+          </fieldset>
           <input
-            class="donations__input input"
+            class="donations__input other-sum input"
             type="number"
             placeholder="Другая сумма"
             maxlength="12"
@@ -172,6 +165,22 @@
             src="./images/new_year.png"
           />
         </div>
+      </section>
+      <section class="progress">
+        <p class="progress__head text">
+          В этом году фонд собирает подарки 21 ребенку из приемных семей на
+          общую сумму 760 395 рублей.
+        </p>
+        <label class="progres__label" for="progress-banner"
+          >Собрано <span class="progress__span">100 000 ₽</span> из
+          <span class="progress__span">760 395 ₽</span></label
+        >
+        <progress
+          class="progress__line"
+          id="progress-banner"
+          value="100000"
+          max="760395"
+        ></progress>
       </section>
       <section class="cards">
         <div class="swiper">
@@ -195,7 +204,10 @@
               />
             </svg>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="cards__pagination-wrp">
+            <div class="swiper-pagination"></div>
+          </div>
+
           <div class="navigation next">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -269,9 +281,9 @@
             Расскажите&nbsp;о&nbsp;марафоне&nbsp;добра
           </h2>
           <p class="social__description text">
-            В этом году фонд собирает подарки 36 детям из приемных семей на
+            В этом году фонд собирает подарки 21 ребенку из приемных семей на
             общую сумму
-            <span class="social__span">1 446 240</span>
+            <span class="social__span">760 395</span>
             рублей.
           </p>
           <p class="social__remark text">
@@ -365,29 +377,177 @@
       </p>
     </footer>
     <aside class="popup">
-      <article class="card">
-        <div class="card__img-wrp">
-          <img src="" class="card__img" />
-        </div>
-        <div class="card__target"></div>
-        <div class="card__chaild">
-          <p class="text card__name"></p>
-          <p class="text card__age"></p>
-        </div>
-        <label class="card__label" for="progress"
-          >Собрано <span class="card__span card__span_sum"></span> из
-          <span class="card__span card__span_limit"></span
-        ></label>
-        <progress class="card__progress" id="progress"></progress>
-
-        <p class="card__preview text"></p>
-        <a href="#donations" class="button card__link popup__close"
-          >Хочу&nbsp;помочь</a
+      <form class="personal-donation" name="personal-donation">
+        <h2 class="personal-donation__title text">Сумма пожертвования</h2>
+        <fieldset
+          class="personal-donation__fields personal-donation__fields_sum fields"
         >
-        <button class="button card__button popup__close">
-          Закрыть историю
-        </button>
-      </article>
+          <label for="personal_sum_300" class="personal-donation__label">
+            <input
+              class="personal-donation__input-sum input"
+              type="radio"
+              name="personal_sum"
+              id="personal_sum_300"
+              value="300"
+            />
+            <span class="personal-donation__span-visible">300 ₽</span>
+          </label>
+          <label for="personal_sum_500" class="personal-donation__label">
+            <input
+              class="personal-donation__input-sum input radio"
+              type="radio"
+              name="personal_sum"
+              id="personal_sum_500"
+              value="500"
+            />
+            <span class="personal-donation__span-visible">500 ₽</span>
+          </label>
+          <label for="personal_sum_1000" class="personal-donation__label">
+            <input
+              class="personal-donation__input-sum input radio"
+              type="radio"
+              name="personal_sum"
+              id="personal_sum_1000"
+              value="1000"
+            />
+            <span class="personal-donation__span-visible">1000 ₽</span>
+          </label>
+          <label for="other_sum" class="personal-donation__label">
+            <input
+              class="personal-donation__other-sum other-sum input radio"
+              type="number"
+              name="personal_otherSum"
+              id="personal_sum_1000"
+              placeholder="Другая сумма"
+            />
+          </label>
+        </fieldset>
+        <fieldset
+          class="personal-donation__fields personal-donation__fields_input fields"
+        >
+          <input
+            placeholder="Ваше имя"
+            class="personal-donation__input input"
+            required
+            name="personal_name"
+          />
+          <input
+            placeholder="Ваша почта"
+            class="personal-donation__input input"
+            required
+            name="personal_email"
+          />
+          <input
+            placeholder="Компания"
+            class="personal-donation__input input"
+            name="personal_company"
+          />
+        </fieldset>
+        <fieldset
+          class="personal-donation__fields personal-donation__fields_method fields"
+        >
+          <label for="card" class="personal-donation__label">
+            <input
+              class="personal-donation__input-sum input"
+              type="radio"
+              name="method"
+              id="card"
+              value="card"
+            />
+            <div class="personal-donation__span-visible">
+              <div class="personal-donation__icons">
+                <img
+                  class="personal-donation__icon"
+                  src="./images/visa.svg"
+                  alt="лого Visa"
+                />
+                <img
+                  class="personal-donation__icon"
+                  src="./images/mastercard.svg"
+                  alt="лого MasterCard"
+                />
+                <img
+                  class="personal-donation__icon"
+                  src="./images/mir.svg"
+                  alt="лого Мир"
+                />
+              </div>
+              Банковская карта
+            </div>
+          </label>
+          <label for="sbp" class="personal-donation__label">
+            <input
+              class="personal-donation__input-sum input"
+              type="radio"
+              name="method"
+              id="sbp"
+              value="sbp"
+              required
+            />
+            <div class="personal-donation__span-visible">
+              <div class="personal-donation__icons">
+                <img
+                  class="personal-donation__icon"
+                  src="./images/sbp.svg"
+                  alt="лого Система быстрых платежей"
+                />
+                <p class="text personal-donation__text-btn">СБП</p>
+              </div>
+              СБП платёж
+            </div>
+          </label>
+          <label for="yandex_pay" class="personal-donation__label">
+            <input
+              class="personal-donation__input-sum input"
+              type="radio"
+              name="method"
+              id="yandex_pay"
+              value="yandex_pay"
+              required
+            />
+            <div class="personal-donation__span-visible">
+              <div class="personal-donation__icons">
+                <img
+                  class="personal-donation__icon"
+                  src="./images/yandex.svg"
+                  alt="лого Система быстрых платежей"
+                />
+                <p class="text personal-donation__text-btn">Pay</p>
+              </div>
+              Yandex Pay
+            </div>
+          </label>
+          <label for="requisites" class="personal-donation__label">
+            <input
+              class="personal-donation__input-sum input"
+              type="radio"
+              name="method"
+              id="requisites"
+              value="requisites"
+              required
+            />
+            <div class="personal-donation__span-visible">
+              <div class="personal-donation__icons">
+                <img
+                  class="personal-donation__icon"
+                  src="./images/qr.svg"
+                  alt="лого Система быстрых платежей"
+                />
+              </div>
+              По реквизитам
+            </div>
+          </label>
+        </fieldset>
+        <div class="personal-donation__buttons">
+          <button class="button personal-donation__button-help">Помочь</button>
+          <button
+            type="button"
+            class="button personal-donation__button-close close"
+          >
+            Закрыть
+          </button>
+        </div>
+      </form>
     </aside>
 
     <template class="card-template">

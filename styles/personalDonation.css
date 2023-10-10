@@ -1,0 +1,188 @@
+.personal-donation {
+  max-width: 704px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 40px;
+  background-color: #fff;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  overflow: auto;
+
+}
+
+.personal-donation__title {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  color: #8B8B8B;
+
+}
+
+.personal-donation__fields_sum {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+
+
+}
+
+.personal-donation__other-sum {
+  padding: 10px;
+  border-radius: 12px;
+  color: #464646;
+  border: 1px #DCDCDC solid;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.personal-donation__other-sum:hover {
+  opacity: 0.7;
+}
+
+.personal-donation__input-sum {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+  opacity: 0;
+}
+
+.personal-donation__span-visible {
+  padding: 10px;
+  border-radius: 10px;
+  color: #8B8B8B;
+  border: 1px #DCDCDC solid;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.personal-donation__input-sum:checked+.personal-donation__span-visible {
+
+  color: #464646;
+  background: rgb(250, 99, 52, 0.1);
+  border: 1px #FA6334 solid;
+}
+
+.personal-donation__fields_input {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.personal-donation__input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #DCDCDC;
+  background: #fff;
+  color: #464646;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.personal-donation__fields_method {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.personal-donation__icons {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.personal-donation__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.personal-donation__text-btn {
+  color: black;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 10px;
+}
+
+.personal-donation__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+.personal-donation__button-help {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.personal-donation__button-close {
+  width: 100%;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #FA6334;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.personal-donation__button-close:hover {
+  opacity: 0.7;
+}
+
+
+
+@media screen and (max-width: 960px) {
+  .personal-donation {
+    padding: 24px;
+    max-width: 648px;
+  }
+}
+
+@media screen and (max-width: 705px) {
+  .personal-donation {
+    max-width: 358px;
+    gap: 5px;
+  }
+
+  .personal-donation__input {
+    padding: 8px;
+  }
+
+  .personal-donation__span-visible {
+    padding: 7px;
+  }
+}
