@@ -4,10 +4,13 @@ export class Card {
     this._name = data.name;
     this._age = data.age;
     this._src = data.src;
-     this._target = data.target;
+    this._target = data.target;
     this._currentSum = data.currentSum;
     this._limit = data.limit;
+    this._preview = data.preview;
     this._description = data.description;
+    this._request = data.request;
+    this._resume = data.resume;
 
     this._template = document
       .querySelector(cardTemplateSelector)
@@ -16,24 +19,20 @@ export class Card {
   }
 
   _setEventListeners() {
-    // this.cardOpenHistory.addEventListener('click', () => {
-    //   this._handleCardClick(
-    //     this._name,
-    //     this._age,
-    //     this._src,
-    //     this._target,
-    //     this._currentSum,
-    //     this._limit,
-    //     this._description
-    //   );
-    // });
     this.cardOpenHistory.addEventListener('click', () => {
-     this._cardHistory.classList.toggle('slide__preview_opened')
-
-    })
-     this._cardHelpButton.addEventListener('click', () => {
-      this._handleCardClick( this._id)
-     })
+      //  this._cardHistory.classList.toggle('slide__preview_opened')
+      if (this.cardOpenHistory.textContent === 'Узнать историю') {
+        this.cardOpenHistory.textContent = 'Закрыть историю';
+      } else {
+        this.cardOpenHistory.textContent = 'Узнать историю';
+      }
+      this._cardDescription.classList.toggle('slide__description__opened');
+      this._cardRequest.classList.toggle('slide__request_opened');
+      this._cardResume.classList.toggle('slide__resume_opened');
+    });
+    this._cardHelpButton.addEventListener('click', () => {
+      this._handleCardClick(this._id);
+    });
   }
 
   getCard = () => {
@@ -46,20 +45,29 @@ export class Card {
     this._cardCurrentSum = this._cardElement.querySelector('.slide__span_sum');
     this._cardLimit = this._cardElement.querySelector('.slide__span_limit');
     this._cardProgressBar = this._cardElement.querySelector('.slide__progress');
-    this._cardHistory = this._cardElement.querySelector('.slide__preview');
+    // this._cardHistory = this._cardElement.querySelector('.slide__preview');
+    this._cardPreview = this._cardElement.querySelector('.slide__preview');
+    this._cardDescription = this._cardElement.querySelector(
+      '.slide__description'
+    );
+    this._cardRequest = this._cardElement.querySelector('.slide__request');
+    this._cardResume = this._cardElement.querySelector('.slide__resume');
+
     this._cardHelpButton = this._cardElement.querySelector('.slide__link');
-    
+
     this._cardName.textContent = this._name;
-    this._cardAge.textContent =this._age;
-    this._cardImage.src = `./images/${this._src}.png`;
+    this._cardAge.textContent = this._age;
+    this._cardImage.src = `./images/children/${this._src}.png`;
     this._cardImage.alt = this._name;
     this._cardTarget.textContent = this._target;
-    this._cardCurrentSum.textContent= `${this._currentSum}₽`;
+    this._cardCurrentSum.textContent = `${this._currentSum}₽`;
     this._cardLimit.textContent = `${this._limit}₽`;
     this._cardProgressBar.value = this._currentSum;
     this._cardProgressBar.max = this._limit;
-    this._cardHistory.textContent = this._description;
-
+    this._cardPreview.textContent = this._preview;
+    this._cardDescription.textContent = this._description;
+    this._cardRequest.textContent = this._request;
+    this._cardResume.textContent = this._resume;
     this._setEventListeners();
 
     return this._cardElement;
