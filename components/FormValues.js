@@ -27,8 +27,7 @@ export class FormValues {
       this._submitForm(this._getInputValues());
     });
     this._otherInput.addEventListener('input', (event) => {
-      console.log(this._radioButton)
-      this._radioButton.forEach((item) => {
+        this._radioButton.forEach((item) => {
         item.checked = false;
       });
     });

@@ -132,7 +132,9 @@
   opacity: 1;
   text-decoration: underline;
 }
-
+.slide__preview {
+  min-height: 60px;
+}
 .swiper__nav-container {
   margin: auto;
   display: flex;
