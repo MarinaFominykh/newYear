@@ -7,9 +7,29 @@ import {
   templateSelector,
   shareLink,
   donationsFormSelector,
-  personalFormSelector
+  personalFormSelector,
+  progress,
+  progressValue
+
 } from '../utils/constans.js';
 import { initialCards } from '../data/cards.js';
+
+// Атрибуты для прогресс-бара
+const getTotalSum = (arr, field) => {
+  let progressAttribute = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    progressAttribute += arr[i][field];
+  }
+  return progressAttribute;
+};
+
+window.addEventListener('load', () => {
+  progress.setAttribute('max', getTotalSum(initialCards, 'limit'))
+  progress.setAttribute('value', getTotalSum(initialCards, 'currentSum'))
+  });
+  progressValue.textContent = `${getTotalSum(initialCards, 'currentSum')} ₽`
+
 
 
 const popup = new Popup();
@@ -18,26 +38,32 @@ const popup = new Popup();
 popup.setEventListeners();
 
 //Общая форма сбора:
-const formDonations = new FormValues({
-  submitForm: (data) => {
-    //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
-    console.log('данные общей формы пожертвований=>', data)
-    formDonations.reset();
+const formDonations = new FormValues(
+  {
+    submitForm: (data) => {
+      //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
+      console.log('данные общей формы пожертвований=>', data);
+      formDonations.reset();
+    },
   },
-}, donationsFormSelector);
+  donationsFormSelector
+);
 
 // Отправка формы:
 formDonations.setEventListeners();
 
 // Персональная форма сбора:
-const formPersonalDonation = new FormValues({
-  submitForm: (data) => {
-    //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
-    console.log('данные персональной формы пожертвований=>', data)
-     popup.close();
-    formPersonalDonation.reset();
+const formPersonalDonation = new FormValues(
+  {
+    submitForm: (data) => {
+      //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
+      console.log('данные персональной формы пожертвований=>', data);
+      popup.close();
+      formPersonalDonation.reset();
+    },
   },
-}, personalFormSelector);
+  personalFormSelector
+);
 
 //Отправка формы:
 formPersonalDonation.setEventListeners();
@@ -63,9 +89,7 @@ function getCard(data) {
 }
 
 //обработка клика по кнопке "узнать историю"
-function handleCardClick(
-  id
-) {
+function handleCardClick(id) {
   popup.open(id);
 }
 
