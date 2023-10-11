@@ -12,6 +12,11 @@ import {
 import { initialCards } from '../data/cards.js';
 
 
+const popup = new Popup();
+
+//открытие и закрытие модального окна:
+popup.setEventListeners();
+
 //Общая форма сбора:
 const formDonations = new FormValues({
   submitForm: (data) => {
@@ -29,6 +34,7 @@ const formPersonalDonation = new FormValues({
   submitForm: (data) => {
     //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
     console.log('данные персональной формы пожертвований=>', data)
+     popup.close();
     formPersonalDonation.reset();
   },
 }, personalFormSelector);
@@ -55,11 +61,6 @@ function getCard(data) {
   const card = new Card(data, templateSelector, handleCardClick);
   return card.getCard();
 }
-
-const popup = new Popup();
-
-//открытие и закрытие модального окна:
-popup.setEventListeners();
 
 //обработка клика по кнопке "узнать историю"
 function handleCardClick(
