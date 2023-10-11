@@ -79,6 +79,7 @@
 }
 
 .banner__link_btn {
+  text-decoration: none;
   padding: 9px 56px;
   border-radius: 20px;
   background: #ffefe7;
