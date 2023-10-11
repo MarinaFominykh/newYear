@@ -16,7 +16,7 @@ import { initialCards } from '../data/cards.js';
 const formDonations = new FormValues({
   submitForm: (data) => {
     //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
-    console.log(data)
+    console.log('данные общей формы пожертвований=>', data)
     formDonations.reset();
   },
 }, donationsFormSelector);
@@ -28,7 +28,7 @@ formDonations.setEventListeners();
 const formPersonalDonation = new FormValues({
   submitForm: (data) => {
     //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
-    console.log(data)
+    console.log('данные персональной формы пожертвований=>', data)
     formPersonalDonation.reset();
   },
 }, personalFormSelector);
@@ -85,7 +85,6 @@ const swiper = new Swiper('.swiper', {
   centeredSlides: false,
   speed: 800,
   simulateTouch: true,
-  // grabCursor: true,
   breakpoints: {
     705: {
       slidesPerView: 2,

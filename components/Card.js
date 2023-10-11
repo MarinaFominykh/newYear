@@ -20,7 +20,6 @@ export class Card {
 
   _setEventListeners() {
     this.cardOpenHistory.addEventListener('click', () => {
-      //  this._cardHistory.classList.toggle('slide__preview_opened')
       if (this.cardOpenHistory.textContent === 'Узнать историю') {
         this.cardOpenHistory.textContent = 'Закрыть историю';
       } else {
@@ -45,7 +44,6 @@ export class Card {
     this._cardCurrentSum = this._cardElement.querySelector('.slide__span_sum');
     this._cardLimit = this._cardElement.querySelector('.slide__span_limit');
     this._cardProgressBar = this._cardElement.querySelector('.slide__progress');
-    // this._cardHistory = this._cardElement.querySelector('.slide__preview');
     this._cardPreview = this._cardElement.querySelector('.slide__preview');
     this._cardDescription = this._cardElement.querySelector(
       '.slide__description'
@@ -60,8 +58,8 @@ export class Card {
     this._cardImage.src = `./images/children/${this._src}.png`;
     this._cardImage.alt = this._name;
     this._cardTarget.textContent = this._target;
-    this._cardCurrentSum.textContent = `${this._currentSum}₽`;
-    this._cardLimit.textContent = `${this._limit}₽`;
+    this._cardCurrentSum.textContent = `${this._currentSum} ₽`;
+    this._cardLimit.textContent = `${this._limit} ₽`;
     this._cardProgressBar.value = this._currentSum;
     this._cardProgressBar.max = this._limit;
     this._cardPreview.textContent = this._preview;

@@ -102,10 +102,6 @@
   gap: 12px;
 }
 
-.slide__preview {
-  min-height: 120px;
-  
-}
 .slide__description, .slide__request, .slide__resume {
   display: none;
 }
@@ -135,9 +131,6 @@
 .slide__button:hover {
   opacity: 1;
   text-decoration: underline;
-}
-
-.slide__link {
 }
 
 .swiper__nav-container {

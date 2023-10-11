@@ -1,7 +1,6 @@
 export class FormValues {
   constructor({ submitForm }, formSelector) {
     this._submitForm = submitForm;
-    // this._form = document.forms.donations;
     this._form = document.querySelector(formSelector);
     this._inputList = Array.from(this._form.querySelectorAll('.input'));
     this._otherInput = this._form.querySelector('.other-sum');
