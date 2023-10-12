@@ -110,9 +110,10 @@
   }
 
   .intro__subtitle {
-    font-size: 14px;
+    font-size: 18px;
     margin-bottom: 0;
-    line-height: 18px;
+    font-weight: 500;
+    line-height: 22px;
     max-width: 433px;
   }
 
@@ -145,5 +146,6 @@
   .intro__subtitle {
     font-size: 14px;
     line-height: 18px;
+    font-weight: 400;
   }
 }
