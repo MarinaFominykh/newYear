@@ -5,11 +5,12 @@ export class Popup {
     
   }
 
-  open(id
+  open(name
   ) {
     this._popup.classList.add('popup_opened');
     this._body.classList.add('opened');
     document.addEventListener('keydown', this._handleEscClose);
+     this._popup.querySelector('.personal-donation__name').textContent = name;
     
 
   }

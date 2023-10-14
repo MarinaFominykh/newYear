@@ -16,7 +16,7 @@ import {
 import { getTotalSum, addSpaces } from '../utils/functions.js';
 import { initialCards } from '../data/cards.js';
 
-let id;
+let id, name;
 progressValue.textContent = `${addSpaces(getTotalSum(initialCards, 'currentSum'))} ₽`;
 
 const popup = new Popup();
@@ -76,9 +76,11 @@ function getCard(data) {
 }
 
 //обработка клика по кнопке "узнать историю"
-function handleCardClick(_id) {
-  popup.open();
-  id = _id;
+function handleCardClick(_id, _name) {
+   id = _id;
+  
+  popup.open(_name);
+ 
 }
 
 // инициализация слайдера:

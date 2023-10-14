@@ -32,7 +32,7 @@ export class Card {
       this._cardResume.classList.toggle('slide__resume_opened');
     });
     this._cardHelpButton.addEventListener('click', () => {
-      this._handleCardClick(this._id);
+      this._handleCardClick(this._id, this._name);
     });
   }
 
