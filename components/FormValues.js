@@ -20,8 +20,9 @@ export class FormValues {
 
     return this._formValues;
   }
-  // Подписка на сабмит
+  // Подписки на события
   setEventListeners() {
+
     this._form.addEventListener('submit', (event) => {
       event.preventDefault();
       this._submitForm(this._getInputValues());
@@ -34,6 +35,11 @@ export class FormValues {
     this._otherInput.addEventListener('change', (event) => {
       if (!event.target.value) this._radioButton[0].checked = true;
     });
+    this._radioButton.forEach((button) => {
+      button.addEventListener('change', () => {
+        this._otherInput.value = '';
+      })
+    })
   }
 
   //Очистка формы

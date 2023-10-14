@@ -9,28 +9,15 @@ import {
   donationsFormSelector,
   personalFormSelector,
   progress,
-  progressValue
-
+  progressValue,
+  KEY,
+  MERCHANT_CAMPAIGN_ID
 } from '../utils/constans.js';
+import { getTotalSum, addSpaces } from '../utils/functions.js';
 import { initialCards } from '../data/cards.js';
 
-// Атрибуты для прогресс-бара
-const getTotalSum = (arr, field) => {
-  let progressAttribute = 0;
-
-  for (let i = 0; i < arr.length; i++) {
-    progressAttribute += arr[i][field];
-  }
-  return progressAttribute;
-};
-
-window.addEventListener('load', () => {
-  progress.setAttribute('max', getTotalSum(initialCards, 'limit'))
-  progress.setAttribute('value', getTotalSum(initialCards, 'currentSum'))
-  });
-  progressValue.textContent = `${getTotalSum(initialCards, 'currentSum')} ₽`
-
-
+let id;
+progressValue.textContent = `${addSpaces(getTotalSum(initialCards, 'currentSum'))} ₽`;
 
 const popup = new Popup();
 
@@ -41,7 +28,7 @@ popup.setEventListeners();
 const formDonations = new FormValues(
   {
     submitForm: (data) => {
-      //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
+      sendPay(data);
       console.log('данные общей формы пожертвований=>', data);
       formDonations.reset();
     },
@@ -56,9 +43,9 @@ formDonations.setEventListeners();
 const formPersonalDonation = new FormValues(
   {
     submitForm: (data) => {
-      //Если нужна доп. функциональность при сабмите формы, можно добавить сюда
       console.log('данные персональной формы пожертвований=>', data);
-      popup.close();
+      sendPay(data);
+
       formPersonalDonation.reset();
     },
   },
@@ -89,8 +76,9 @@ function getCard(data) {
 }
 
 //обработка клика по кнопке "узнать историю"
-function handleCardClick(id) {
-  popup.open(id);
+function handleCardClick(_id) {
+  popup.open();
+  id = _id;
 }
 
 // инициализация слайдера:
@@ -142,3 +130,65 @@ function copyURL() {
 
 // Копирование ссылки на страницу в буфер:
 shareLink.addEventListener('click', copyURL);
+
+// Приведение суммы к минорным единицам:
+function addTwoZeros(string) {
+  let number = parseInt(string);
+  number = number * 100;
+  return number;
+}
+
+function sendPay(data) {
+  const { name, email, company, otherSum, sum: selectedSum } = data;
+  const sum = addTwoZeros(otherSum || selectedSum);
+  let options = {
+
+    widget_key: KEY,
+    amount: sum,
+    merchant_fields: {
+      name,
+      email,
+      company,
+    },
+    merchant_campaign_id: MERCHANT_CAMPAIGN_ID,
+    user_fundraising_program_id: id,
+    payment_scheme: 'double',
+    user_email: email,
+  };
+console.log(options)
+  let M = new Mixplat(options);
+  M.build();
+  M.setSuccessCallback(function (o, i) {
+    popup.close();
+  });
+  
+}
+
+// document.addEventListener('DOMContentLoaded', function(){
+//         let elem = document.getElementById('mixplat_widget');
+//         elem.addEventListener('click', function(){
+
+//             let options = {
+//                 widget_key: '1becc19b-d3e8-422f-bb28-14ec9d94e66b',
+//                 amount: 1000, // 10 руб. 00 коп.
+//                 description: 'Благотворительное пожертвование',
+//                 payment_method: 'card',
+//                 user_email: 'email@mail.ru',
+//                 user_phone: '79031234567',
+//                 merchant_payment_id: '1234567'
+//             }
+//             let M = new Mixplat(options);
+//             M.build();
+//             M.setSuccessCallback(function(o, i){
+//                 console.log('success');
+//             });
+//             M.setFailCallback(function(o, i){
+//                 console.log('fail');
+//             });
+
+//             M.setCloseCallback(function(o, i){
+//                 console.log('close');
+//             });
+
+//         });
+//     });

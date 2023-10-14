@@ -1,6 +1,8 @@
+import { addSpaces } from '../utils/functions.js';
 export class Card {
   constructor(data, cardTemplateSelector, handleCardClick) {
     this._id = data.id;
+    this._progressId= data.progressId;
     this._name = data.name;
     this._age = data.age;
     this._src = data.src;
@@ -39,29 +41,26 @@ export class Card {
     this._cardImage = this._cardElement.querySelector('.slide__img');
     this._cardName = this._cardElement.querySelector('.slide__name');
     this._cardAge = this._cardElement.querySelector('.slide__age');
+    this._cardProgress = this._cardElement.querySelector('.slide__progress');
     this.cardOpenHistory = this._cardElement.querySelector('.slide__button');
     this._cardTarget = this._cardElement.querySelector('.slide__target');
     this._cardCurrentSum = this._cardElement.querySelector('.slide__span_sum');
     this._cardLimit = this._cardElement.querySelector('.slide__span_limit');
-    this._cardProgressBar = this._cardElement.querySelector('.slide__progress');
     this._cardPreview = this._cardElement.querySelector('.slide__preview');
     this._cardDescription = this._cardElement.querySelector(
       '.slide__description'
     );
     this._cardRequest = this._cardElement.querySelector('.slide__request');
     this._cardResume = this._cardElement.querySelector('.slide__resume');
-
     this._cardHelpButton = this._cardElement.querySelector('.slide__link');
-
     this._cardName.textContent = this._name;
     this._cardAge.textContent = this._age;
+    this._cardProgress.id = this._progressId;
     this._cardImage.src = `./images/children/${this._src}.png`;
     this._cardImage.alt = this._name;
     this._cardTarget.textContent = this._target;
-    this._cardCurrentSum.textContent = `${this._currentSum} ₽`;
-    this._cardLimit.textContent = `${this._limit} ₽`;
-    this._cardProgressBar.value = this._currentSum;
-    this._cardProgressBar.max = this._limit;
+    this._cardCurrentSum.textContent = `${addSpaces(this._currentSum)} ₽`;
+    this._cardLimit.textContent = `${addSpaces(this._limit) } ₽`;
     this._cardPreview.textContent = this._preview;
     this._cardDescription.textContent = this._description;
     this._cardRequest.textContent = this._request;

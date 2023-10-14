@@ -173,13 +173,15 @@
           В этом году фонд собирает подарки 21 ребенку из приемных семей на
           общую сумму 760 395 рублей.
         </p>
-        <label class="progres__label" for="progress-banner"
-          >Собрано
+        <p class="progres__label text" for="progress-banner">
+          Собрано
           <span class="progress__span progress__span_curent-sum"></span>
-          из <span class="progress__span">760 395 ₽</span></label
-        >
-        <progress class="progress__line" id="progress-banner"></progress>
-        <!-- <progress class="progress__line" id="progress-banner"></progress> -->
+          из <span class="progress__span">760 395 ₽</span>
+        </p>
+
+        <div class="progress__wrp">
+          <div class="progress__line-progress"></div>
+        </div>
       </section>
       <section class="cards">
         <div class="swiper">
@@ -384,7 +386,10 @@
     </footer>
     <aside class="popup">
       <form class="personal-donation" name="personal-donation">
-        <h2 class="personal-donation__title text">Сумма пожертвования</h2>
+        <h2 class="personal-donation__title text">
+          Сумма пожертвования для
+          <span class="personal-donation__name"></span>
+        </h2>
         <fieldset
           class="personal-donation__fields personal-donation__fields_sum fields"
         >
@@ -392,7 +397,7 @@
             <input
               class="personal-donation__input-sum input radio"
               type="radio"
-              name="personal_sum"
+              name="sum"
               id="personal_sum_300"
               value="300"
             />
@@ -402,7 +407,7 @@
             <input
               class="personal-donation__input-sum input radio"
               type="radio"
-              name="personal_sum"
+              name="sum"
               id="personal_sum_500"
               value="500"
             />
@@ -412,7 +417,7 @@
             <input
               class="personal-donation__input-sum input radio"
               type="radio"
-              name="personal_sum"
+              name="sum"
               id="personal_sum_1000"
               value="1000"
             />
@@ -422,7 +427,7 @@
             <input
               class="personal-donation__other-sum other-sum input"
               type="number"
-              name="personal_otherSum"
+              name="otherSum"
               id="personal_otherSum"
               placeholder="Другая сумма"
             />
@@ -435,21 +440,21 @@
             placeholder="Ваше имя"
             class="personal-donation__input input"
             required
-            name="personal_name"
+            name="name"
           />
           <input
             placeholder="Ваша почта"
             class="personal-donation__input input"
             required
-            name="personal_email"
+            name="email"
           />
           <input
             placeholder="Компания"
             class="personal-donation__input input"
-            name="personal_company"
+            name="company"
           />
         </fieldset>
-        <fieldset
+        <!-- <fieldset
           class="personal-donation__fields personal-donation__fields_method fields"
         >
           <label for="card" class="personal-donation__label">
@@ -487,7 +492,7 @@
               type="radio"
               name="method"
               id="sbp"
-              value="sbp"
+              value="bank"
               required
             />
             <div class="personal-donation__span-visible">
@@ -508,7 +513,7 @@
               type="radio"
               name="method"
               id="yandex_pay"
-              value="yandex_pay"
+              value="wallet"
               required
             />
             <div class="personal-donation__span-visible">
@@ -516,7 +521,7 @@
                 <img
                   class="personal-donation__icon"
                   src="./images/yandex.svg"
-                  alt="лого Система быстрых платежей"
+                  alt="лого  Yandex Pay"
                 />
                 <p class="text personal-donation__text-btn">Pay</p>
               </div>
@@ -537,15 +542,20 @@
                 <img
                   class="personal-donation__icon"
                   src="./images/qr.svg"
-                  alt="лого Система быстрых платежей"
+                  alt="QR-код"
                 />
               </div>
               По реквизитам
             </div>
           </label>
-        </fieldset>
+        </fieldset> -->
         <div class="personal-donation__buttons">
-          <button class="button personal-donation__button-help">Помочь</button>
+          <button
+            id="mixplat_widget"
+            class="button personal-donation__button-help"
+          >
+            Помочь
+          </button>
           <button
             type="button"
             class="button personal-donation__button-close close"
@@ -567,17 +577,13 @@
             <p class="text slide__name"></p>
             <p class="text slide__age"></p>
           </div>
-          <label class="slide__label" for="progress"
-            >Собрано <span class="slide__span slide__span_sum"></span> из
-            <span class="slide__span slide__span_limit"></span
-          ></label>
-          <progress
-            class="slide__progress"
-            id="progress"
-            value="20"
-            max="100"
-          ></progress>
-
+          <p class="slide__label text">
+            Собрано <span class="slide__span slide__span_sum"></span> из
+            <span class="slide__span slide__span_limit"></span>
+          </p>
+          <div class="slide__progress-wrp">
+            <div id="" class="slide__progress" data-type="mixplat-stat"></div>
+          </div>
           <div class="slide__text-container">
             <p class="slide__preview text"></p>
             <p class="slide__description text"></p>
@@ -585,13 +591,14 @@
             <p class="slide__resume text"></p>
           </div>
 
-          <a href="#donations" class="button slide__link">Хочу&nbsp;помочь</a>
+          <button class="button slide__link">Хочу&nbsp;помочь</button>
           <button class="button slide__button">Узнать историю</button>
         </article>
       </li>
     </template>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script async src="https://pay.mixplat.com/widget/v3/widget.js"></script>
     <script src="./pages/index.js" type="module"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 export const initialCards = [
   {
-    id: '1',
+    id: '7983',
+    progressId: '95fe551e-12f4-4579-ad54-d437f1f049dd',
     name: 'Амина Ф.',
     age: '8 лет',
     src: 'amina',
@@ -16,7 +17,8 @@ export const initialCards = [
     resume: 'Помогите, пожалуйста, оплатить необходимые лекарства для Амины!',
   },
   {
-    id: '2',
+    id: '7982',
+    progressId: 'd1e8064f-7f80-4df7-8f55-86ad4ea2bd44',
     name: 'Рита Г.',
     age: '14 лет',
     src: 'grozdilova_rita',
@@ -31,7 +33,8 @@ export const initialCards = [
     resume: 'Помогите, пожалуйста, Рите и ее родителям!',
   },
   {
-    id: '3',
+    id: '7981',
+     progressId: 'fc55f22d-de7e-4b4c-aeff-1d37cba6405c',
     name: 'Стёпа Л.',
     age: '13 лет',
     src: 'styopa',
@@ -48,7 +51,8 @@ export const initialCards = [
     resume: 'Помогите, пожалуйста, Степе справиться с травмами прошлого!',
   },
   {
-    id: '4',
+    id: '7980',
+    progressId: 'ead28b0c-d1ed-4e0c-aeb8-039042546f46',
     name: 'Кирилл Ф.',
     age: '10 лет',
     src: 'kirill',
@@ -64,7 +68,8 @@ export const initialCards = [
       'Помогите, пожалуйста, оплатить терапию для Кирилла. Это поможет мальчику учиться в школе и чувствовать себя сильным и здоровым!',
   },
   {
-    id: '5',
+    id: '7979',
+    progressId: '298cf137-c9e6-4237-8bae-7879a9450eae',
     name: 'Максим С.',
     age: '13 лет',
     src: 'maksim_1',
@@ -80,7 +85,8 @@ export const initialCards = [
     resume: 'Помогите, пожалуйста, оплатить для Максима необходимое лечение!',
   },
   {
-    id: '6',
+    id: '7978',
+    progressId: '9d6c9625-cb06-4fe7-9c7b-94edf3bad355',
     name: 'Рустам К.',
     age: '9 лет',
     src: 'rustam',
@@ -95,8 +101,9 @@ export const initialCards = [
       'Помогите, пожалуйста, Рустаму! Мальчик очень хочет, чтобы ему было легче учиться!',
   },
   {
-    id: '7',
+    id: '7977',
     name: 'Серёжа С.',
+    progressId: '0f0dcc37-9e3a-4f93-b1ae-addcb7e7e144',
     age: '15 лет',
     src: 'serezha',
     target: 'На лекарства и очки',
@@ -111,7 +118,8 @@ export const initialCards = [
     resume: 'Помогите, пожалуйста, Сереже жить активно и интересно! ',
   },
   {
-    id: '8',
+    id: '7976',
+     progressId: 'ef0756c4-9c0e-4508-bd83-60bfcb4b362c',
     name: 'Даня З.',
     age: '7 лет',
     src: 'danya',
@@ -128,7 +136,8 @@ export const initialCards = [
       'Помогите, пожалуйста, Дане забыть свои страхи и стать счастливым ребенком!',
   },
   {
-    id: '9',
+    id: '7975',
+    progressId: '66741881-2cb7-422e-b783-1a9a36e9cc3a',
     name: 'Саша О.',
     age: '13 лет',
     src: 'orlov_alersandr',
@@ -144,7 +153,8 @@ export const initialCards = [
       'Помогите, пожалуйста, приобрести для Саши ортопедическую обувь на лето, осень и зиму, а также пару индивидуальных стелек.',
   },
   {
-    id: '10',
+    id: '7974',
+    progressId: '8781e2f4-c1b0-4ccc-bc28-6cd19233fe82',
     name: 'Руслан О.',
     age: '10 лет',
     src: 'orlov_ruslan',
@@ -160,7 +170,8 @@ export const initialCards = [
       'Помогите, пожалуйста, приобрести для Руслана летнюю, демисезонную и зимнюю ортопедическую обувь, а также пару индивидуальных стелек!',
   },
   {
-    id: '11',
+    id: '7973',
+    progressId: '520dc40e-fadb-4a98-ad0f-b0cec227bf9c',
     name: 'Лена О.',
     age: '7 лет',
     src: 'lena',
@@ -176,7 +187,8 @@ export const initialCards = [
       'Помогите, пожалуйста, Лене подготовиться к школе и пойти навстречу новым знаниям уверенной в своих силах!',
   },
   {
-    id: '12',
+    id: '7972',
+    progressId: '8b01e108-879f-4894-a80b-a94fc21ab11e',
     name: 'Анна Ф.',
     age: '9 лет',
     src: 'fatkina',
@@ -193,7 +205,8 @@ export const initialCards = [
       ' Мама воспитывает девочку одна и средства у семьи сильно ограничены. Помогите, пожалуйста, Ане и ее маме!',
   },
   {
-    id: '13',
+    id: '7971',
+    progressId: '6aa8352e-3110-4c90-943c-fac944871d1a',
     name: 'Курбан М.',
     age: '6 лет',
     src: 'kurban',
@@ -208,7 +221,8 @@ export const initialCards = [
     resume: 'Помогите, пожалуйста, Курбану и дальше расти активным мальчиком!',
   },
   {
-    id: '14',
+    id: '7970',
+     progressId: 'b5d0c5ea-21b8-41ce-9bee-65d3eeac01c9',
     name: 'Зоя П.',
     age: '5 лет',
     src: 'zoya',
@@ -224,7 +238,8 @@ export const initialCards = [
     resume: 'Помогите маленькой Зое больше не чувствовать себя одинокой!',
   },
   {
-    id: '15',
+    id: '7969',
+    progressId: 'a58a1f20-925d-49b7-a8b4-1daa3a36db3a',
     name: 'Данил Л.',
     age: '7 лет',
     src: 'lakotaev',
@@ -240,7 +255,8 @@ export const initialCards = [
     resume: 'Помогите, пожалуйста, Даниле оплатить обследование глаз!',
   },
   {
-    id: '16',
+    id: '7968',
+    progressId: '3b9b06af-a23e-4fee-a8e8-75308f12f0d9',
     name: 'Ксения К.',
     age: '14 лет',
     src: 'kyurya_kseniya',
@@ -256,7 +272,8 @@ export const initialCards = [
     resume: 'Помогите, пожалуйста, приобрести очки для Ксюши!',
   },
   {
-    id: '17',
+    id: '7967',
+    progressId: '164d5205-8d12-4860-a7f1-681ecb338858',
     name: 'Максим О.',
     age: '9 лет',
     src: 'maksim_2',
@@ -273,7 +290,8 @@ export const initialCards = [
     resume: 'Помогите Максиму чувствовать себя на равных с одноклассниками!',
   },
   {
-    id: '18',
+    id: '7966',
+    progressId: '0f5e2730-c48a-44a8-80eb-0716cdaf17a1',
     name: 'Ульяна П.',
     age: '9 лет',
     src: 'postanogova',
@@ -289,7 +307,8 @@ export const initialCards = [
     resume: 'Помогите, пожалуйста, Ульяне поддерживать здоровье!',
   },
   {
-    id: '19',
+    id: '7965',
+    progressId: '506789d9-e6ca-45a5-8e4c-d12b4591098b',
     name: 'Света К.',
     age: '6 лет',
     src: 'sveta',
@@ -307,7 +326,8 @@ export const initialCards = [
       'Помогите, пожалуйста, оплатить работу специалиста, чтобы Света больше не боялась людей!',
   },
   {
-    id: '20',
+    id: '7963',
+    progressId: '7cc470f8-e92c-4f3e-9a16-d3d5e13514e0',
     name: 'Рома Г.',
     age: '16 лет',
     src: 'roma',
@@ -325,7 +345,8 @@ export const initialCards = [
   },
 
   {
-    id: '21',
+    id: '7962',
+    progressId: '481c4dd0-aeed-4649-85e3-f6b49d6d84ca',
     name: 'Андрей Ф.',
     age: '11 лет',
     src: 'andrey',
