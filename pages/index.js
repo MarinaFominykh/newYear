@@ -11,13 +11,15 @@ import {
   progress,
   progressValue,
   KEY,
-  MERCHANT_CAMPAIGN_ID
+  MERCHANT_CAMPAIGN_ID,
 } from '../utils/constans.js';
 import { getTotalSum, addSpaces } from '../utils/functions.js';
 import { initialCards } from '../data/cards.js';
 
 let id, name;
-progressValue.textContent = `${addSpaces(getTotalSum(initialCards, 'currentSum'))} ₽`;
+progressValue.textContent = `${addSpaces(
+  getTotalSum(initialCards, 'currentSum')
+)} ₽`;
 
 const popup = new Popup();
 
@@ -29,7 +31,7 @@ const formDonations = new FormValues(
   {
     submitForm: (data) => {
       sendPay(data);
-      console.log('данные общей формы пожертвований=>', data);
+
       formDonations.reset();
     },
   },
@@ -43,7 +45,6 @@ formDonations.setEventListeners();
 const formPersonalDonation = new FormValues(
   {
     submitForm: (data) => {
-      console.log('данные персональной формы пожертвований=>', data);
       sendPay(data);
 
       formPersonalDonation.reset();
@@ -77,10 +78,9 @@ function getCard(data) {
 
 //обработка клика по кнопке "узнать историю"
 function handleCardClick(_id, _name) {
-   id = _id;
-  
+  id = _id;
+
   popup.open(_name);
- 
 }
 
 // инициализация слайдера:
@@ -123,7 +123,6 @@ function copyURL() {
     .writeText(currentURL)
     .then(function () {
       shareLink.dataset.tooltip = 'Ссылка скопирована';
-      console.log('Текст скопирован');
     })
     .catch(function (err) {
       shareLink.dataset.tooltip = 'Ошибка при копировании';
@@ -144,7 +143,6 @@ function sendPay(data) {
   const { name, email, company, otherSum, sum: selectedSum } = data;
   const sum = addTwoZeros(otherSum || selectedSum);
   let options = {
-
     widget_key: KEY,
     amount: sum,
     merchant_fields: {
@@ -157,40 +155,10 @@ function sendPay(data) {
     payment_scheme: 'double',
     user_email: email,
   };
-console.log(options)
+
   let M = new Mixplat(options);
   M.build();
   M.setSuccessCallback(function (o, i) {
     popup.close();
   });
-  
 }
-
-// document.addEventListener('DOMContentLoaded', function(){
-//         let elem = document.getElementById('mixplat_widget');
-//         elem.addEventListener('click', function(){
-
-//             let options = {
-//                 widget_key: '1becc19b-d3e8-422f-bb28-14ec9d94e66b',
-//                 amount: 1000, // 10 руб. 00 коп.
-//                 description: 'Благотворительное пожертвование',
-//                 payment_method: 'card',
-//                 user_email: 'email@mail.ru',
-//                 user_phone: '79031234567',
-//                 merchant_payment_id: '1234567'
-//             }
-//             let M = new Mixplat(options);
-//             M.build();
-//             M.setSuccessCallback(function(o, i){
-//                 console.log('success');
-//             });
-//             M.setFailCallback(function(o, i){
-//                 console.log('fail');
-//             });
-
-//             M.setCloseCallback(function(o, i){
-//                 console.log('close');
-//             });
-
-//         });
-//     });
