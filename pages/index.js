@@ -8,15 +8,14 @@ import {
   shareLink,
   donationsFormSelector,
   personalFormSelector,
-  progress,
   progressValue,
   KEY,
   MERCHANT_CAMPAIGN_ID,
 } from '../utils/constans.js';
-import { getTotalSum, addSpaces } from '../utils/functions.js';
+import { getTotalSum, addSpaces, copyURL } from '../utils/functions.js';
 import { initialCards } from '../data/cards.js';
 
-let id, name;
+let id;
 progressValue.textContent = `${addSpaces(
   getTotalSum(initialCards, 'currentSum')
 )} ₽`;
@@ -31,7 +30,6 @@ const formDonations = new FormValues(
   {
     submitForm: (data) => {
       sendPay(data);
-
       formDonations.reset();
     },
   },
@@ -46,7 +44,6 @@ const formPersonalDonation = new FormValues(
   {
     submitForm: (data) => {
       sendPay(data);
-
       formPersonalDonation.reset();
     },
   },
@@ -79,7 +76,6 @@ function getCard(data) {
 //обработка клика по кнопке "узнать историю"
 function handleCardClick(_id, _name) {
   id = _id;
-
   popup.open(_name);
 }
 
@@ -117,20 +113,9 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-function copyURL() {
-  let currentURL = window.location.href;
-  navigator.clipboard
-    .writeText(currentURL)
-    .then(function () {
-      shareLink.dataset.tooltip = 'Ссылка скопирована';
-    })
-    .catch(function (err) {
-      shareLink.dataset.tooltip = 'Ошибка при копировании';
-    });
-}
 
 // Копирование ссылки на страницу в буфер:
-shareLink.addEventListener('click', copyURL);
+shareLink.addEventListener('click', () => copyURL(shareLink));
 
 // Приведение суммы к минорным единицам:
 function addTwoZeros(string) {
@@ -151,7 +136,7 @@ function sendPay(data) {
       company,
     },
     merchant_campaign_id: MERCHANT_CAMPAIGN_ID,
-    user_fundraising_program_id: id,
+    user_fundraising_program_id: id || MERCHANT_CAMPAIGN_ID,
     payment_scheme: 'double',
     user_email: email,
   };

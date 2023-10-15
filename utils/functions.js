@@ -19,3 +19,15 @@ export const addSpaces = (number) => {
   }
   return result.split("").reverse().join("");
 }
+
+export const copyURL = (element) => {
+  let currentURL = window.location.href;
+  navigator.clipboard
+    .writeText(currentURL)
+    .then( () => {
+      element.dataset.tooltip = 'Ссылка скопирована';
+    })
+    .catch((err) => {
+      element.dataset.tooltip = 'Ошибка при копировании';
+    });
+}
